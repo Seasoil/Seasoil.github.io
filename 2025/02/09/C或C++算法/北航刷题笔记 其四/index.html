@@ -1,0 +1,529 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>北航刷题笔记 其四 | 仓库</title><meta name="keywords" content="c/c++,笔记,北航"><meta name="author" content="fufhaha"><meta name="copyright" content="fufhaha"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#18171d"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="北航刷题笔记 其四"><meta name="application-name" content="北航刷题笔记 其四"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#18171d"><meta property="og:type" content="article"><meta property="og:title" content="北航刷题笔记 其四"><meta property="og:url" content="https://huhuha.top/2025/02/09/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E5%8C%97%E8%88%AA%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E5%9B%9B/index.html"><meta property="og:site_name" content="仓库"><meta property="og:description" content="这是寒假北航刷题的学习笔记"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="/images/202504071512548.jpg"><meta property="article:author" content="fufhaha"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="/images/202504071512548.jpg"><meta name="description" content="这是寒假北航刷题的学习笔记"><link rel="shortcut icon" href="/images/%E5%B8%9D%E5%90%9B%E5%96%9D%E8%8C%B6.gif"><link rel="canonical" href="https://huhuha.top/2025/02/09/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E5%8C%97%E8%88%AA%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E5%9B%9B/"><link rel="preconnect" href="//cdn.cbd.int"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="manifest" href="/manifest.json"/><meta name="msapplication-TileColor" content="var(--anzhiyu-main)"/><link rel="mask-icon" href="/images/%E5%B8%9D%E5%90%9B%E5%96%9D%E8%8C%B6.gif" color="#5bbad5"/><link rel="apple-touch-icon" sizes="180x180" href="/images/%E5%B8%9D%E5%90%9B%E5%96%9D%E8%8C%B6.gif"/><link rel="apple-touch-icon-precomposed" sizes="180x180" href="/images/%E5%B8%9D%E5%90%9B%E5%96%9D%E8%8C%B6.gif"/><link rel="icon" type="image/png" sizes="32x32" href="/images/%E5%B8%9D%E5%90%9B%E5%96%9D%E8%8C%B6.gif"/><link rel="icon" type="image/png" sizes="16x16" href="/images/%E5%B8%9D%E5%90%9B%E5%96%9D%E8%8C%B6.gif"/><link rel="bookmark" href="/images/%E5%B8%9D%E5%90%9B%E5%96%9D%E8%8C%B6.gif"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2048-2732.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2732-2048.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1668-2388.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2388-1668.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1536-2048.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2048-1536.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1668-2224.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2224-1668.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1620-2160.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2160-1620.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1290-2796.jpg" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2796-1290.jpg" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1179-2556.jpg" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2556-1179.jpg" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1284-2778.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2778-1284.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1170-2532.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2532-1170.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1125-2436.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2436-1125.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1242-2688.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2688-1242.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-828-1792.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1792-828.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1242-2208.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2208-1242.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-750-1334.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1334-750.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-640-1136.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: {"enable":true,"title":"与数百名博主无限进步","addFriendPlaceholder":"昵称（请勿包含博客等字样）：\n网站地址（要求博客地址，请勿提交个人主页）：\n头像图片url（请提供尽可能清晰的图片，我会上传到我自己的图床）：\n描述：\n站点截图（可选）：\n"},
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2024/07/27/125766904/ba62475f396df9de3316a08ed9e65d86_5680958632268053399..png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"🗺️风向已记录在航海日志，下次再见！","backTitle":"🛡️防御工事运作正常"},
+  LA51: undefined,
+  greetingBox: {"enable":true,"default":"🌰火堆噼啪作响，烤棉花糖的树枝已经削好啦","list":[{"greeting":"🌙星星在守夜，三只毛茸茸挤成团取暖","startTime":0,"endTime":5},{"greeting":"🌄露水收集罐满当当，晾着晒干的蘑菇串","startTime":6,"endTime":8},{"greeting":"🧺晒着太阳的干草堆，蜜蜂在篱笆外哼歌巡逻","startTime":9,"endTime":11},{"greeting":"🏰午休时间？扩建水下基地的好时机","startTime":12,"endTime":14},{"greeting":"柴火堆成小雪山，篱笆外插满了吓唬野猪的稻草人","startTime":15,"endTime":18},{"greeting":"🗡️夜巡开始！","startTime":19,"endTime":21},{"greeting":"🧶窗台摆满驱赶黑暗的萤石罐，此刻，被夜幕包围的你是安全的","startTime":22,"endTime":23}]},
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: {"skills":null},
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: fufhaha","link":"链接: ","source":"来源: 仓库","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '仓库',
+  title: '北航刷题笔记 其四',
+  postAI: '',
+  pageFillDescription: '2.结构化编程, 1.scanf()中不能有任何符号按照输入格式来严格。, 2.看因数, 3.char *fgets(char *str int n FILE *stream)（有时候字符串数组最后还有个结束符’\0’）, 参数说明, 返回值, 4.矩形嵌套：, 算法步骤, 5.结构体成员的排序比较：, 排序逻辑, 1. qsort 内部调用用户定义的比较函数, 2. 排序后的数组 rects, 6.进行浮点数运算时有时候有误差这时可以ltx3D1e-6即可, 7.补零操作：%09.7f 是 C 语言中格式化输出的一个格式说明符用于控制浮点数的显示格式。具体含义如下：, 解析 %09.7f, 8.计算角度：（已知tanα）（math.h中）, 9.开根号：（math.h中）, 10.while (scanf(%d %d %d ampa ampb ampc) x3Dx3D 3), 11.返回绝对值：fabs()（math.h）, 12.已知2点坐标求第三点（x0y0）到这两点组成的直线的距离：, 直线外一点到直线的距离公式, 13.二进制运算：, 14.如果要求某一天是星期几可以用蔡勒公式：, 蔡勒公式：, 15.找一个数n的因数时最大范围可以是sqrt（n）结构化编程中不能有任何符号按照输入格式来严格看因数有时候字符串数组最后还有个结束符是标准库中的一个函数用于从文件或标准输入中读取一行字符串直到遇到换行符文件结束符或者达到最大读取字符数为止它的定义在中这个输入语句可以输入包括空格的但是不行遇到空格会停下来一般使用是参数说明用于存储读取内容的字符数组的指针要读取的最大字符数包括字符串结尾的输入流可以是文件指针如返回值如果成功返回的地址如果遇到文件结束或发生错误返回矩形嵌套要判断三个矩形是否能够完整嵌套需要满足以下条件定义嵌套规则一个矩形可以嵌套在另一个矩形中当且仅当长宽长宽且长宽长宽即矩形的两边分别比矩形的两边大算法步骤排序矩形首先对每个矩形的长和宽重新排序保证每个矩形是以较短边较长边表示按照尺寸排序按照矩形的短边和长边依次排序确保矩形按面积从小到大排列逐对检查嵌套关系检查排序后的矩形是否满足上述嵌套条件结构体成员的排序比较中属于标准库中的函数位于是标准库中的快速排序函数定义如下指向要排序的数组的起始地址数组中元素的个数数组中每个元素的大小以字节为单位指向一个用户定义的比较函数用来比较两个元素的大小排序逻辑内部调用用户定义的比较函数会在排序过程中对数组的元素进行多次比较它会通过传入的比较函数来确定两个元素的相对顺序优先比较短边短边相等时比较长边比较逻辑如果两个矩形的短边不同就以短边为主要排序依据升序如果短边相等就以长边为次要排序依据升序排序后的数组会对数组中的个矩形按照比较逻辑重新排列排序结果会直接更新到数组中将指针类型转换为这样就可以访问结构体的成员变量进行浮点数运算时有时候有误差这时可以即可补零操作是语言中格式化输出的一个格式说明符用于控制浮点数的显示格式具体含义如下解析表示这是一个格式说明符的起始标志用零填充输出的空位在数值不足宽度时总的输出宽度为个字符包括小数点小数部分和整数部分如果实际内容长度不足个字符前面会用填充表示小数部分的精度为即显示位小数表示浮点数的格式即输出小数形式的数字如计算角度已知中先通过函数在中反正切函数得到弧度角度弧度即是一个更为准确的函数它能够根据和的符号判断在哪个象限并返回正确的角度注意如果为负数要开根号中函数参数输入参数必须是一个非负数如果传入负数会返回返回值返回的平方根即如果遇到没有给出具体多少行输入的情况可以用这个返回绝对值在比较浮点数精确值的时候可以用这个已知点坐标求第三点到这两点组成的直线的距离直线外一点到直线的距离公式点到直线的距离的计算公式为二进制运算在二进制中位从右到左的权值分别是以此类推所以表示的十进制值是如果要求某一天是星期几可以用蔡勒公式蔡勒公式对于公历日期年月日星期几的计算公式如下其中是星期几的结果表示星期几的数字星期六星期天星期一星期五是日期是月份但对于月和月蔡勒公式将其视为前一年的月和月是年份但对于月和月年份需要减去即视为上一年表示向下取整即取整数部分找一个数的因数时最大范围可以是',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: true,
+  postUpdate: '2025-04-06 00:00:00',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="/images/%E5%B8%9D%E5%90%9B%E5%96%9D%E8%8C%B6.gif"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src="/images/帝君喝茶.gif" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src="/images/茶水.gif" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">仓库</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/c/" style="font-size: 1.05rem;">c++<sup>1</sup></a><a href="/tags/c-c/" style="font-size: 1.05rem;">c/c++<sup>11</sup></a><a href="/tags/%E5%88%B7%E9%A2%98/" style="font-size: 1.05rem;">刷题<sup>2</sup></a><a href="/tags/%E5%8C%97%E8%88%AA/" style="font-size: 1.05rem;">北航<sup>6</sup></a><a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 1.05rem;">博客<sup>1</sup></a><a href="/tags/%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB%E7%AE%97%E6%B3%95/" style="font-size: 1.05rem;">图像识别算法<sup>4</sup></a><a href="/tags/%E5%A4%87%E8%B5%9B/" style="font-size: 1.05rem;">备赛<sup>1</sup></a><a href="/tags/%E5%A4%A9%E6%A2%AF%E8%B5%9B/" style="font-size: 1.05rem;">天梯赛<sup>1</sup></a><a href="/tags/%E5%AE%9E%E6%88%98/" style="font-size: 1.05rem;">实战<sup>2</sup></a><a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/" style="font-size: 1.05rem;">嵌入式<sup>1</sup></a><a href="/tags/%E6%8C%87%E5%8D%97/" style="font-size: 1.05rem;">指南<sup>1</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 1.05rem;">数据结构<sup>1</sup></a><a href="/tags/%E6%96%B0%E9%A2%86%E5%9F%9F/" style="font-size: 1.05rem;">新领域<sup>1</sup></a><a href="/tags/%E6%B4%9B%E8%B0%B7/" style="font-size: 1.05rem;">洛谷<sup>3</sup></a><a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 1.05rem;">深度学习<sup>4</sup></a><a href="/tags/%E6%B8%B8%E6%88%8F%E5%B0%8F%E9%A1%B9%E7%9B%AE/" style="font-size: 1.05rem;">游戏小项目<sup>1</sup></a><a href="/tags/%E6%B9%96%E5%8D%97%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6/" style="font-size: 1.05rem;">湖南工业大学<sup>1</sup></a><a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 1.05rem;">笔记<sup>13</sup></a><a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 1.05rem;">算法<sup>5</sup></a><a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/" style="font-size: 1.05rem;">蓝桥杯<sup>1</sup></a><a href="/tags/%E9%A1%B9%E7%9B%AE%E8%AE%B2%E8%A7%A3/" style="font-size: 1.05rem;">项目讲解<sup>2</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/04/"><span class="card-archive-list-date">四月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">6</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/03/"><span class="card-archive-list-date">三月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/02/"><span class="card-archive-list-date">二月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">10</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/01/"><span class="card-archive-list-date">一月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/11/"><span class="card-archive-list-date">十一月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/10/"><span class="card-archive-list-date">十月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>笔记</span></a><a class="article-meta__tags" href="/tags/c-c/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>c/c++</span></a><a class="article-meta__tags" href="/tags/%E5%8C%97%E8%88%AA/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>北航</span></a></span></div></div><h1 class="post-title" itemprop="name headline">北航刷题笔记 其四</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2025-02-08T16:00:00.000Z" title="发表于 2025-02-09 00:00:00">2025-02-09</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2025-04-05T16:00:00.000Z" title="更新于 2025-04-06 00:00:00">2025-04-06</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-pv-cv" id="" data-flag-title="北航刷题笔记 其四"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="busuanzi_value_page_pv"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为长沙"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>长沙</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="/images/202504071512548.jpg"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://huhuha.top/2025/02/09/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E5%8C%97%E8%88%AA%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E5%9B%9B/"><header><a href="/tags/%E7%AC%94%E8%AE%B0/" tabindex="-1" itemprop="url">笔记</a><a href="/tags/c-c/" tabindex="-1" itemprop="url">c/c++</a><a href="/tags/%E5%8C%97%E8%88%AA/" tabindex="-1" itemprop="url">北航</a><h1 id="CrawlerTitle" itemprop="name headline">北航刷题笔记 其四</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">fufhaha</span><time itemprop="dateCreated datePublished" datetime="2025-02-08T16:00:00.000Z" title="发表于 2025-02-09 00:00:00">2025-02-09</time><time itemprop="dateCreated datePublished" datetime="2025-04-05T16:00:00.000Z" title="更新于 2025-04-06 00:00:00">2025-04-06</time></header><h1 id="2-结构化编程"><a href="#2-结构化编程" class="headerlink" title="2.结构化编程"></a>2.结构化编程</h1><h2 id="1-scanf-“”-中不能有任何符号，按照输入格式来，严格。"><a href="#1-scanf-“”-中不能有任何符号，按照输入格式来，严格。" class="headerlink" title="1.scanf(“”)中不能有任何符号，按照输入格式来，严格。"></a>1.scanf(“”)中不能有任何符号，按照输入格式来，严格。</h2><h2 id="2-看因数"><a href="#2-看因数" class="headerlink" title="2.看因数"></a>2.看因数</h2><h2 id="3-char-fgets-char-str-int-n-FILE-stream-（有时候字符串数组最后还有个结束符’-0’）"><a href="#3-char-fgets-char-str-int-n-FILE-stream-（有时候字符串数组最后还有个结束符’-0’）" class="headerlink" title="3.char *fgets(char *str, int n, FILE *stream);（有时候字符串数组最后还有个结束符’\0’）"></a>3.char *fgets(char *str, int n, FILE *stream);（有时候字符串数组最后还有个结束符’\0’）</h2><p><code>fgets()</code> 是 C 标准库中的一个函数，用于从文件或标准输入中读取一行字符串，直到遇到换行符、文件结束符（EOF），或者达到最大读取字符数为止。它的定义在 <code>&lt;stdio.h&gt;</code> 中。</p>
+<p>这个输入语句可以输入<strong>包括空格</strong>的，但是scanf不行，<strong>scanf遇到空格会停下来</strong></p>
+<p>一般使用stream是<strong>stdin</strong></p>
+<h3 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a><strong>参数说明</strong></h3><ol>
+<li>**<code>str</code>**：用于存储读取内容的字符数组的指针。</li>
+<li>**<code>n</code>**：要读取的最大字符数（包括字符串结尾的 <code>\0</code>）。</li>
+<li>**<code>stream</code>**：输入流，可以是文件指针（如 <code>stdin</code>）。</li>
+</ol>
+<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a><strong>返回值</strong></h3><ul>
+<li>如果成功，返回 <code>str</code> 的地址。</li>
+<li>如果遇到文件结束（EOF）或发生错误，返回 <code>NULL</code>。</li>
+</ul>
+<h2 id="4-矩形嵌套："><a href="#4-矩形嵌套：" class="headerlink" title="4.矩形嵌套："></a>4.矩形嵌套：</h2><p>要判断三个矩形是否能够<strong>完整嵌套</strong>，需要满足以下条件：</p>
+<ol>
+<li><p><strong>定义嵌套规则</strong>： 一个矩形 AAA 可以嵌套在另一个矩形 BBB 中，当且仅当：</p>
+<p><strong>min(A<del>长</del>,A<del>宽</del>)&gt;min(B<del>长</del>,B<del>宽</del>)</strong></p>
+<p>且</p>
+<p><strong>max(A<del>长</del>,A<del>宽</del>)&gt;max(B<del>长</del>,B<del>宽</del>)</strong></p>
+<p>即，矩形 A的两边分别比矩形 B 的两边大。</p>
+</li>
+</ol>
+<h3 id="算法步骤"><a href="#算法步骤" class="headerlink" title="算法步骤"></a>算法步骤</h3><ol>
+<li><strong>排序矩形</strong>： 首先，对每个矩形的长和宽重新排序，保证每个矩形是以 <strong>(较短边, 较长边)</strong> 表示。</li>
+<li><strong>按照尺寸排序</strong>： 按照矩形的短边和长边依次排序，确保矩形按<strong>面积从小到大</strong>排列。</li>
+<li><strong>逐对检查嵌套关系</strong>： 检查排序后的矩形是否满足上述嵌套条件。</li>
+</ol>
+<h2 id="5-结构体成员的排序比较："><a href="#5-结构体成员的排序比较：" class="headerlink" title="5.结构体成员的排序比较："></a>5.结构体成员的排序比较：</h2><p><strong>c中：</strong></p>
+<p><strong><code>qsort</code><strong>：属于 C 标准库中的函数，</strong>位于 <code>&lt;stdlib.h&gt;</code></strong></p>
+<p><code>qsort</code> 是 C 标准库中的快速排序函数，定义如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">qsort</span><span class="params">(<span class="type">void</span> *base, <span class="type">size_t</span> nitems, <span class="type">size_t</span> size, <span class="type">int</span> (*compar)(<span class="type">const</span> <span class="type">void</span> *, <span class="type">const</span> <span class="type">void</span> *))</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong><code>base</code></strong>: 指向要排序的数组的起始地址。</li>
+<li><strong><code>nitems</code></strong>: 数组中元素的个数。</li>
+<li><strong><code>size</code></strong>: 数组中每个元素的大小（以字节为单位）。</li>
+<li><strong><code>compar</code></strong>: 指向一个用户定义的比较函数，用来比较两个元素的大小。</li>
+</ul>
+<h3 id="排序逻辑"><a href="#排序逻辑" class="headerlink" title="排序逻辑"></a><strong>排序逻辑</strong></h3><h4 id="1-qsort-内部调用用户定义的比较函数"><a href="#1-qsort-内部调用用户定义的比较函数" class="headerlink" title="1. qsort 内部调用用户定义的比较函数"></a>1. <strong><code>qsort</code> 内部调用用户定义的比较函数</strong></h4><p><code>qsort</code> 会在排序过程中对数组的元素进行多次比较。<br>它会通过传入的比较函数 <code>compare</code> 来确定两个元素的相对顺序：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">compare</span><span class="params">(<span class="type">const</span> <span class="type">void</span> *a, <span class="type">const</span> <span class="type">void</span> *b)</span> &#123;</span><br><span class="line">    Rectangle *rectA = (Rectangle *)a;</span><br><span class="line">    Rectangle *rectB = (Rectangle *)b;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 优先比较短边，短边相等时比较长边</span></span><br><span class="line">    <span class="keyword">if</span> (rectA-&gt;shortSide != rectB-&gt;shortSide)</span><br><span class="line">        <span class="keyword">return</span> rectA-&gt;shortSide - rectB-&gt;shortSide;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> rectA-&gt;longSide - rectB-&gt;longSide;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>比较逻辑：<ol>
+<li>如果两个矩形的短边 (<code>shortSide</code>) 不同，就以短边为主要排序依据（升序）。</li>
+<li>如果短边相等，就以长边 (<code>longSide</code>) 为次要排序依据（升序）。</li>
+</ol>
+</li>
+</ul>
+<h4 id="2-排序后的数组-rects"><a href="#2-排序后的数组-rects" class="headerlink" title="2. 排序后的数组 rects"></a>2. <strong>排序后的数组 <code>rects</code></strong></h4><ul>
+<li><code>qsort</code> 会对数组 <code>rects</code> 中的 3 个矩形按照比较逻辑重新排列。</li>
+<li>排序结果会直接更新到 <code>rects</code> 数组中。</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Rectangle *rectA = (Rectangle *)a;</span><br><span class="line">Rectangle *rectB = (Rectangle *)b;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>将 <strong><code>void *</code> 指针</strong>类型转换**为 <code>Rectangle *</code>**，这样就可以访问 <code>Rectangle</code> 结构体的成员变量。</li>
+</ul>
+<h2 id="6-进行浮点数运算时有时候有误差，这时可以"><a href="#6-进行浮点数运算时有时候有误差，这时可以" class="headerlink" title="6.进行浮点数运算时有时候有误差，这时可以&lt;&#x3D;1e-6即可"></a>6.进行浮点数运算时有时候有误差，这时可以&lt;&#x3D;1e-6即可</h2><h2 id="7-补零操作：-09-7f-是-C-语言中格式化输出的一个格式说明符，用于控制浮点数的显示格式。具体含义如下："><a href="#7-补零操作：-09-7f-是-C-语言中格式化输出的一个格式说明符，用于控制浮点数的显示格式。具体含义如下：" class="headerlink" title="7.补零操作：%09.7f 是 C 语言中格式化输出的一个格式说明符，用于控制浮点数的显示格式。具体含义如下："></a>7.补零操作：<code>%09.7f</code> 是 C 语言中格式化输出的一个格式说明符，用于控制浮点数的显示格式。具体含义如下：</h2><h3 id="解析-09-7f"><a href="#解析-09-7f" class="headerlink" title="解析 %09.7f"></a>解析 <code>%09.7f</code></h3><ol>
+<li>**<code>%</code>**：<ul>
+<li>表示这是一个格式说明符的起始标志。</li>
+</ul>
+</li>
+<li>**<code>0</code>**：<ul>
+<li>用<strong>零填充输出的空位（在数值不足宽度时）</strong>。</li>
+</ul>
+</li>
+<li>**<code>9</code>**：<ul>
+<li>总的输出宽度为 9 个字符（<strong>包括小数点、小数部分和整数部分）</strong>。</li>
+<li><strong>如果实际内容长度不足 9 个字符，前面会用 <code>0</code> 填充</strong>。</li>
+</ul>
+</li>
+<li>**<code>.7</code>**：<ul>
+<li>表示小数部分的精度为 7，即显示 7 位小数。</li>
+</ul>
+</li>
+<li>**<code>f</code>**：<ul>
+<li>表示浮点数的格式（即输出小数形式的数字，如 <code>123.4567890</code>）。</li>
+</ul>
+</li>
+</ol>
+<h2 id="8-计算角度：（已知tanα）（math-h中）"><a href="#8-计算角度：（已知tanα）（math-h中）" class="headerlink" title="8.计算角度：（已知tanα）（math.h中）"></a>8.计算角度：（已知tanα）（math.h中）</h2><p>先通过<strong>atan（）函数（在math.h中）</strong>（反正切函数）得到弧度。</p>
+<p>角度&#x3D;弧度×(180&#x2F;π)即</p>
+<p><strong>α&#x3D;atan(tanα)*(180&#x2F;π)</strong></p>
+<p>**<code>atan2(y, x)</code>**： <strong><code>atan2</code> 是一个更为准确的函数，它能够根据 <code>x</code> 和 <code>y</code> 的符号判断在哪个象限，并返回正确的角度</strong></p>
+<p>(<strong>注意</strong>：如果为负数，要+360)</p>
+<h2 id="9-开根号：（math-h中）"><a href="#9-开根号：（math-h中）" class="headerlink" title="9.开根号：（math.h中）"></a>9.开根号：（math.h中）</h2><p>sqrt函数：参数：</p>
+<ul>
+<li><code>x</code>：输入参数，必须是一个非负数。如果传入负数，<code>sqrt()</code> 会返回 <code>NaN</code>（Not a Number）。</li>
+</ul>
+<p>返回值：</p>
+<ul>
+<li>返回 <code>x</code> 的平方根，即 <code>√x</code>。</li>
+</ul>
+<h2 id="10-while-scanf-“-d-d-d”-a-b-c-3"><a href="#10-while-scanf-“-d-d-d”-a-b-c-3" class="headerlink" title="10.while (scanf(“%d %d %d”, &amp;a, &amp;b, &amp;c) &#x3D;&#x3D; 3)"></a>10.while (scanf(“%d %d %d”, &amp;a, &amp;b, &amp;c) &#x3D;&#x3D; 3)</h2><p>如果<strong>遇到没有给出具体多少行输入</strong>的情况可以用这个</p>
+<h2 id="11-返回绝对值：fabs-（math-h）"><a href="#11-返回绝对值：fabs-（math-h）" class="headerlink" title="11.返回绝对值：fabs()（math.h）"></a>11.返回绝对值：fabs()（math.h）</h2><p>在比较<strong>浮点数精确值</strong>的时候可以用这个</p>
+<h2 id="12-已知2点坐标，求第三点（x0-y0）到这两点组成的直线的距离："><a href="#12-已知2点坐标，求第三点（x0-y0）到这两点组成的直线的距离：" class="headerlink" title="12.已知2点坐标，求第三点（x0,y0）到这两点组成的直线的距离："></a>12.已知2点坐标，求第三点（x0,y0）到这两点组成的直线的距离：</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">double</span> numerator = <span class="built_in">fabs</span>((y2 - y1) * x0 - (x2 - x1) * y0 + x2 * y1 - y2 * x1);</span><br><span class="line"><span class="type">double</span> denominator = <span class="built_in">sqrt</span>((y2 - y1) * (y2 - y1) + (x2 - x1) * (x2 - x1));</span><br><span class="line"><span class="type">double</span> distance = numerator / denominator;</span><br></pre></td></tr></table></figure>
+
+<h3 id="直线外一点到直线的距离公式"><a href="#直线外一点到直线的距离公式" class="headerlink" title="直线外一点到直线的距离公式"></a>直线外一点到直线的距离公式</h3><p>$$<br>点 P(x0,y0) 到直线 Ax+By+C&#x3D;0的距离 D 的计算公式为：<br>$$</p>
+<p>$$<br>D &#x3D; \frac{|Ax_0 + By_0 + C|}{\sqrt{A^2 + B^2}}<br>$$</p>
+<h2 id="13-二进制运算："><a href="#13-二进制运算：" class="headerlink" title="13.二进制运算："></a>13.二进制运算：</h2><p>$$<br>在二进制中，位从右到左的权值分别是：2^0, 2^1, 2^2, 2^3，以此类推。<br>$$</p>
+<p>所以，<code>0000</code> 表示的十进制值是：<br>$$<br>0 \times 2^3 + 0 \times 2^2 + 0 \times 2^1 + 0 \times 2^0 &#x3D; 0<br>$$</p>
+<h2 id="14-如果要求某一天是星期几，可以用蔡勒公式："><a href="#14-如果要求某一天是星期几，可以用蔡勒公式：" class="headerlink" title="14.如果要求某一天是星期几，可以用蔡勒公式："></a>14.如果要求某一天是星期几，可以用蔡勒公式：</h2><h3 id="蔡勒公式："><a href="#蔡勒公式：" class="headerlink" title="蔡勒公式："></a>蔡勒公式：</h3><p>对于公历日期（<code>y</code>年<code>m</code>月<code>d</code>日），星期几的计算公式如下：<br>$$<br>  h &#x3D; \left( d + \left\lfloor \frac{13(m+1)}{5} \right\rfloor + y + \left\lfloor \frac{y}{4} \right\rfloor - \left\lfloor \frac{y}{100} \right\rfloor + \left\lfloor \frac{y}{400} \right\rfloor \right) \mod 7<br>$$<br>其中：</p>
+<ul>
+<li><p><strong><code>h</code> 是星期几</strong>的结果，表示星期几的数字（0: 星期六，1: 星期天，2: 星期一，…，6: 星期五）。</p>
+</li>
+<li><p><strong><code>d</code> 是日期</strong>。</p>
+</li>
+<li><p><strong><code>m</code> 是月份（1-12）</strong>，但对于1月和2月，蔡勒公式将其视为前一年的13月和14月。</p>
+</li>
+<li><p><strong><code>y</code> 是年份</strong>，但对于1月和2月，年份需要减去1（即视为上一年）。</p>
+</li>
+<li><p>$$<br><code>\left\lfloor x \right\rfloor</code><br>$$</p>
+<p>表示向下取整（即取整数部分）。</p>
+</li>
+</ul>
+<h2 id="15-找一个数n的因数时，最大范围可以是sqrt（n）"><a href="#15-找一个数n的因数时，最大范围可以是sqrt（n）" class="headerlink" title="15.找一个数n的因数时，最大范围可以是sqrt（n）"></a>15.找一个数n的因数时，最大范围可以是sqrt（n）</h2></article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/%E5%B8%9D%E5%90%9B%E5%96%9D%E8%8C%B6.gif" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/%E5%B8%9D%E5%90%9B%E5%96%9D%E8%8C%B6.gif" title="头像" alt="头像"></a><div class="post-copyright__author_name">fufhaha</div><div class="post-copyright__author_desc">存储知识</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://huhuha.top/2025/02/09/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E5%8C%97%E8%88%AA%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E5%9B%9B/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://huhuha.top/2025/02/09/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E5%8C%97%E8%88%AA%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E5%9B%9B/')">北航刷题笔记 其四</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://huhuha.top/2025/02/09/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E5%8C%97%E8%88%AA%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E5%9B%9B/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=北航刷题笔记 其四&amp;url=https://huhuha.top/2025/02/09/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E5%8C%97%E8%88%AA%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E5%9B%9B/&amp;pic=/images/202504071512548.jpg" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://huhuha.top" target="_blank">仓库</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E7%AC%94%E8%AE%B0/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>笔记<span class="tagsPageCount">13</span></a><a class="post-meta__box__tags" href="/tags/c-c/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>c/c++<span class="tagsPageCount">11</span></a><a class="post-meta__box__tags" href="/tags/%E5%8C%97%E8%88%AA/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>北航<span class="tagsPageCount">6</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="/images/202504071512122.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2025/02/09/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E6%B4%9B%E8%B0%B7%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E4%B8%80/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/202504071512548.jpg" onerror="onerror=null;src='/images/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">洛谷刷题笔记 其一</div></div></a></div><div class="next-post pull-right"><a href="/2025/02/09/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E5%8C%97%E8%88%AA%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E4%BA%94/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/202504071512548.jpg" onerror="onerror=null;src='/images/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">北航刷题笔记 其五</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/2025/02/02/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E5%8C%97%E8%88%AA%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E4%B8%80/" title="北航刷题笔记 其一"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/202504071512548.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-02-02</div><div class="title">北航刷题笔记 其一</div></div></a></div><div><a href="/2025/02/09/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E5%8C%97%E8%88%AA%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E4%B8%89/" title="北航刷题笔记 其三"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/202504071512548.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-02-09</div><div class="title">北航刷题笔记 其三</div></div></a></div><div><a href="/2025/02/09/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E5%8C%97%E8%88%AA%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E4%BA%8C/" title="北航刷题笔记 其二"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/202504071512548.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-02-09</div><div class="title">北航刷题笔记 其二</div></div></a></div><div><a href="/2025/02/09/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E5%8C%97%E8%88%AA%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E5%85%AD/" title="北航刷题笔记 其六"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/202504071512548.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-02-09</div><div class="title">北航刷题笔记 其六</div></div></a></div><div><a href="/2025/02/09/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E5%8C%97%E8%88%AA%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E4%BA%94/" title="北航刷题笔记 其五"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/202504071512548.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-02-09</div><div class="title">北航刷题笔记 其五</div></div></a></div><div><a href="/2025/02/09/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E6%B4%9B%E8%B0%B7%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E4%B8%80/" title="洛谷刷题笔记 其一"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/202504071512548.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-02-09</div><div class="title">洛谷刷题笔记 其一</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/%E5%B8%9D%E5%90%9B%E5%96%9D%E8%8C%B6.gif" onerror="this.onerror=null;this.src='/images/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/%E5%B8%9D%E5%90%9B%E5%96%9D%E8%8C%B6.gif" alt="status"/></div></div><div class="author-info__description">在这里随便逛逛</div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content">欢迎！</div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://bu.dusays.com/2023/05/13/645fa415e8694.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E7%BB%93%E6%9E%84%E5%8C%96%E7%BC%96%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">2.结构化编程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-scanf-%E2%80%9C%E2%80%9D-%E4%B8%AD%E4%B8%8D%E8%83%BD%E6%9C%89%E4%BB%BB%E4%BD%95%E7%AC%A6%E5%8F%B7%EF%BC%8C%E6%8C%89%E7%85%A7%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F%E6%9D%A5%EF%BC%8C%E4%B8%A5%E6%A0%BC%E3%80%82"><span class="toc-number">1.1.</span> <span class="toc-text">1.scanf(“”)中不能有任何符号，按照输入格式来，严格。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%9C%8B%E5%9B%A0%E6%95%B0"><span class="toc-number">1.2.</span> <span class="toc-text">2.看因数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-char-fgets-char-str-int-n-FILE-stream-%EF%BC%88%E6%9C%89%E6%97%B6%E5%80%99%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E7%BB%84%E6%9C%80%E5%90%8E%E8%BF%98%E6%9C%89%E4%B8%AA%E7%BB%93%E6%9D%9F%E7%AC%A6%E2%80%99-0%E2%80%99%EF%BC%89"><span class="toc-number">1.3.</span> <span class="toc-text">3.char *fgets(char *str, int n, FILE *stream);（有时候字符串数组最后还有个结束符’\0’）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E"><span class="toc-number">1.3.1.</span> <span class="toc-text">参数说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-number">1.3.2.</span> <span class="toc-text">返回值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E7%9F%A9%E5%BD%A2%E5%B5%8C%E5%A5%97%EF%BC%9A"><span class="toc-number">1.4.</span> <span class="toc-text">4.矩形嵌套：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E6%AD%A5%E9%AA%A4"><span class="toc-number">1.4.1.</span> <span class="toc-text">算法步骤</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E7%BB%93%E6%9E%84%E4%BD%93%E6%88%90%E5%91%98%E7%9A%84%E6%8E%92%E5%BA%8F%E6%AF%94%E8%BE%83%EF%BC%9A"><span class="toc-number">1.5.</span> <span class="toc-text">5.结构体成员的排序比较：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F%E9%80%BB%E8%BE%91"><span class="toc-number">1.5.1.</span> <span class="toc-text">排序逻辑</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-qsort-%E5%86%85%E9%83%A8%E8%B0%83%E7%94%A8%E7%94%A8%E6%88%B7%E5%AE%9A%E4%B9%89%E7%9A%84%E6%AF%94%E8%BE%83%E5%87%BD%E6%95%B0"><span class="toc-number">1.5.1.1.</span> <span class="toc-text">1. qsort 内部调用用户定义的比较函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E6%8E%92%E5%BA%8F%E5%90%8E%E7%9A%84%E6%95%B0%E7%BB%84-rects"><span class="toc-number">1.5.1.2.</span> <span class="toc-text">2. 排序后的数组 rects</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E8%BF%9B%E8%A1%8C%E6%B5%AE%E7%82%B9%E6%95%B0%E8%BF%90%E7%AE%97%E6%97%B6%E6%9C%89%E6%97%B6%E5%80%99%E6%9C%89%E8%AF%AF%E5%B7%AE%EF%BC%8C%E8%BF%99%E6%97%B6%E5%8F%AF%E4%BB%A5"><span class="toc-number">1.6.</span> <span class="toc-text">6.进行浮点数运算时有时候有误差，这时可以&lt;&#x3D;1e-6即可</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E8%A1%A5%E9%9B%B6%E6%93%8D%E4%BD%9C%EF%BC%9A-09-7f-%E6%98%AF-C-%E8%AF%AD%E8%A8%80%E4%B8%AD%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA%E7%9A%84%E4%B8%80%E4%B8%AA%E6%A0%BC%E5%BC%8F%E8%AF%B4%E6%98%8E%E7%AC%A6%EF%BC%8C%E7%94%A8%E4%BA%8E%E6%8E%A7%E5%88%B6%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E6%98%BE%E7%A4%BA%E6%A0%BC%E5%BC%8F%E3%80%82%E5%85%B7%E4%BD%93%E5%90%AB%E4%B9%89%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="toc-number">1.7.</span> <span class="toc-text">7.补零操作：%09.7f 是 C 语言中格式化输出的一个格式说明符，用于控制浮点数的显示格式。具体含义如下：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E6%9E%90-09-7f"><span class="toc-number">1.7.1.</span> <span class="toc-text">解析 %09.7f</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E8%AE%A1%E7%AE%97%E8%A7%92%E5%BA%A6%EF%BC%9A%EF%BC%88%E5%B7%B2%E7%9F%A5tan%CE%B1%EF%BC%89%EF%BC%88math-h%E4%B8%AD%EF%BC%89"><span class="toc-number">1.8.</span> <span class="toc-text">8.计算角度：（已知tanα）（math.h中）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E5%BC%80%E6%A0%B9%E5%8F%B7%EF%BC%9A%EF%BC%88math-h%E4%B8%AD%EF%BC%89"><span class="toc-number">1.9.</span> <span class="toc-text">9.开根号：（math.h中）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-while-scanf-%E2%80%9C-d-d-d%E2%80%9D-a-b-c-3"><span class="toc-number">1.10.</span> <span class="toc-text">10.while (scanf(“%d %d %d”, &amp;a, &amp;b, &amp;c) &#x3D;&#x3D; 3)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E8%BF%94%E5%9B%9E%E7%BB%9D%E5%AF%B9%E5%80%BC%EF%BC%9Afabs-%EF%BC%88math-h%EF%BC%89"><span class="toc-number">1.11.</span> <span class="toc-text">11.返回绝对值：fabs()（math.h）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-%E5%B7%B2%E7%9F%A52%E7%82%B9%E5%9D%90%E6%A0%87%EF%BC%8C%E6%B1%82%E7%AC%AC%E4%B8%89%E7%82%B9%EF%BC%88x0-y0%EF%BC%89%E5%88%B0%E8%BF%99%E4%B8%A4%E7%82%B9%E7%BB%84%E6%88%90%E7%9A%84%E7%9B%B4%E7%BA%BF%E7%9A%84%E8%B7%9D%E7%A6%BB%EF%BC%9A"><span class="toc-number">1.12.</span> <span class="toc-text">12.已知2点坐标，求第三点（x0,y0）到这两点组成的直线的距离：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B4%E7%BA%BF%E5%A4%96%E4%B8%80%E7%82%B9%E5%88%B0%E7%9B%B4%E7%BA%BF%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%85%AC%E5%BC%8F"><span class="toc-number">1.12.1.</span> <span class="toc-text">直线外一点到直线的距离公式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%BF%90%E7%AE%97%EF%BC%9A"><span class="toc-number">1.13.</span> <span class="toc-text">13.二进制运算：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-%E5%A6%82%E6%9E%9C%E8%A6%81%E6%B1%82%E6%9F%90%E4%B8%80%E5%A4%A9%E6%98%AF%E6%98%9F%E6%9C%9F%E5%87%A0%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%94%A8%E8%94%A1%E5%8B%92%E5%85%AC%E5%BC%8F%EF%BC%9A"><span class="toc-number">1.14.</span> <span class="toc-text">14.如果要求某一天是星期几，可以用蔡勒公式：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%94%A1%E5%8B%92%E5%85%AC%E5%BC%8F%EF%BC%9A"><span class="toc-number">1.14.1.</span> <span class="toc-text">蔡勒公式：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-%E6%89%BE%E4%B8%80%E4%B8%AA%E6%95%B0n%E7%9A%84%E5%9B%A0%E6%95%B0%E6%97%B6%EF%BC%8C%E6%9C%80%E5%A4%A7%E8%8C%83%E5%9B%B4%E5%8F%AF%E4%BB%A5%E6%98%AFsqrt%EF%BC%88n%EF%BC%89"><span class="toc-number">1.15.</span> <span class="toc-text">15.找一个数n的因数时，最大范围可以是sqrt（n）</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/04/28/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%20%E5%85%B6%E4%B8%89%20OpenCV%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" title="深度学习 其三 OpenCV图像处理"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/202504071512122.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="深度学习 其三 OpenCV图像处理"/></a><div class="content"><a class="title" href="/2025/04/28/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%20%E5%85%B6%E4%B8%89%20OpenCV%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" title="深度学习 其三 OpenCV图像处理">深度学习 其三 OpenCV图像处理</a><time datetime="2025-04-27T16:00:00.000Z" title="发表于 2025-04-28 00:00:00">2025-04-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/04/27/C++%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%AD%A6%E4%B9%A0/C++%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%20%E5%85%B6%E4%B8%80%20%E8%B5%B0%E8%BF%B7%E5%AE%AB/" title="C++面向对象 其一 走迷宫"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/202504071512695.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="C++面向对象 其一 走迷宫"/></a><div class="content"><a class="title" href="/2025/04/27/C++%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%AD%A6%E4%B9%A0/C++%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%20%E5%85%B6%E4%B8%80%20%E8%B5%B0%E8%BF%B7%E5%AE%AB/" title="C++面向对象 其一 走迷宫">C++面向对象 其一 走迷宫</a><time datetime="2025-04-26T16:00:00.000Z" title="发表于 2025-04-27 00:00:00">2025-04-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/04/27/%E5%A4%87%E8%B5%9B/%E5%A4%87%E8%B5%9B%20%E5%85%B6%E4%B8%80%20%20%20%E6%B9%96%E5%8C%97%E4%BF%A1%E5%88%9B%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" title="备赛 其一 湖北信创人工智能"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/202504071511317.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="备赛 其一 湖北信创人工智能"/></a><div class="content"><a class="title" href="/2025/04/27/%E5%A4%87%E8%B5%9B/%E5%A4%87%E8%B5%9B%20%E5%85%B6%E4%B8%80%20%20%20%E6%B9%96%E5%8C%97%E4%BF%A1%E5%88%9B%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" title="备赛 其一 湖北信创人工智能">备赛 其一 湖北信创人工智能</a><time datetime="2025-04-26T16:00:00.000Z" title="发表于 2025-04-27 00:00:00">2025-04-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/04/27/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%20%E5%85%B6%E4%B8%80%20%E5%88%9D%E8%AF%86/" title="深度学习 其一 图像识别算法"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/202504071512122.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="深度学习 其一 图像识别算法"/></a><div class="content"><a class="title" href="/2025/04/27/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%20%E5%85%B6%E4%B8%80%20%E5%88%9D%E8%AF%86/" title="深度学习 其一 图像识别算法">深度学习 其一 图像识别算法</a><time datetime="2025-04-26T16:00:00.000Z" title="发表于 2025-04-27 00:00:00">2025-04-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/04/27/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%20%20%E5%85%B6%E4%BA%8C%20%20%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%92%8C%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" title="深度学习 其二 神经网络和卷积神经网络"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/202504071512122.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="深度学习 其二 神经网络和卷积神经网络"/></a><div class="content"><a class="title" href="/2025/04/27/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%20%20%E5%85%B6%E4%BA%8C%20%20%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%92%8C%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" title="深度学习 其二 神经网络和卷积神经网络">深度学习 其二 神经网络和卷积神经网络</a><time datetime="2025-04-26T16:00:00.000Z" title="发表于 2025-04-27 00:00:00">2025-04-27</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="workboard"><img class="workSituationImg boardsign" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-上班摸鱼中.svg" alt="距离月入25k也就还差一个大佬带我~" title="距离月入25k也就还差一个大佬带我~"/><div id="runtimeTextTip"></div></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v5.4.0" title="博客框架为Hexo_v5.4.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg" alt="博客框架为Hexo_v5.4.0"/></a><a class="github-badge" target="_blank" href="https://blog.anheyu.com/" style="margin-inline:5px" data-title="本站使用AnZhiYu主题" title="本站使用AnZhiYu主题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg" alt="本站使用AnZhiYu主题"/></a></p></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2024 - 2025 By <a class="footer-bar-link" href="/" title="fufhaha" target="_blank">fufhaha</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">21</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">21</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">0</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/帝君喝茶.gif" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/茶水.gif" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/c/" style="font-size: 0.88rem;">c++<sup>1</sup></a><a href="/tags/c-c/" style="font-size: 0.88rem;">c/c++<sup>11</sup></a><a href="/tags/%E5%88%B7%E9%A2%98/" style="font-size: 0.88rem;">刷题<sup>2</sup></a><a href="/tags/%E5%8C%97%E8%88%AA/" style="font-size: 0.88rem;">北航<sup>6</sup></a><a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 0.88rem;">博客<sup>1</sup></a><a href="/tags/%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB%E7%AE%97%E6%B3%95/" style="font-size: 0.88rem;">图像识别算法<sup>4</sup></a><a href="/tags/%E5%A4%87%E8%B5%9B/" style="font-size: 0.88rem;">备赛<sup>1</sup></a><a href="/tags/%E5%A4%A9%E6%A2%AF%E8%B5%9B/" style="font-size: 0.88rem;">天梯赛<sup>1</sup></a><a href="/tags/%E5%AE%9E%E6%88%98/" style="font-size: 0.88rem;">实战<sup>2</sup></a><a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/" style="font-size: 0.88rem;">嵌入式<sup>1</sup></a><a href="/tags/%E6%8C%87%E5%8D%97/" style="font-size: 0.88rem;">指南<sup>1</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 0.88rem;">数据结构<sup>1</sup></a><a href="/tags/%E6%96%B0%E9%A2%86%E5%9F%9F/" style="font-size: 0.88rem;">新领域<sup>1</sup></a><a href="/tags/%E6%B4%9B%E8%B0%B7/" style="font-size: 0.88rem;">洛谷<sup>3</sup></a><a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 0.88rem;">深度学习<sup>4</sup></a><a href="/tags/%E6%B8%B8%E6%88%8F%E5%B0%8F%E9%A1%B9%E7%9B%AE/" style="font-size: 0.88rem;">游戏小项目<sup>1</sup></a><a href="/tags/%E6%B9%96%E5%8D%97%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6/" style="font-size: 0.88rem;">湖南工业大学<sup>1</sup></a><a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 0.88rem;">笔记<sup>13</sup></a><a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 0.88rem;">算法<sup>5</sup></a><a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/" style="font-size: 0.88rem;">蓝桥杯<sup>1</sup></a><a href="/tags/%E9%A1%B9%E7%9B%AE%E8%AE%B2%E8%A7%A3/" style="font-size: 0.88rem;">项目讲解<sup>2</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("2024/10/07 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2024 By 安知鱼 V1.6.14",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 fufhaha 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("2024/10/07 00:00:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    const footer = document.getElementById("footer");
+    if (!footer) return
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      if (img != null) {
+        img.src = "https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-下班啦.svg";
+        img.title = "下班了就该开开心心的玩耍，嘿嘿~";
+        img.alt = "下班了就该开开心心的玩耍，嘿嘿~";
+      }
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="c/c++,笔记,北航"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><script defer="defer" id="ribbon" src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>

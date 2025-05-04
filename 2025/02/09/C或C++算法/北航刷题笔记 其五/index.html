@@ -1,0 +1,967 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>北航刷题笔记 其五 | 仓库</title><meta name="keywords" content="c/c++,笔记,北航"><meta name="author" content="fufhaha"><meta name="copyright" content="fufhaha"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#18171d"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="北航刷题笔记 其五"><meta name="application-name" content="北航刷题笔记 其五"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#18171d"><meta property="og:type" content="article"><meta property="og:title" content="北航刷题笔记 其五"><meta property="og:url" content="https://huhuha.top/2025/02/09/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E5%8C%97%E8%88%AA%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E4%BA%94/index.html"><meta property="og:site_name" content="仓库"><meta property="og:description" content="这是寒假北航刷题的学习笔记"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="/images/202504071512548.jpg"><meta property="article:author" content="fufhaha"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="/images/202504071512548.jpg"><meta name="description" content="这是寒假北航刷题的学习笔记"><link rel="shortcut icon" href="/images/%E5%B8%9D%E5%90%9B%E5%96%9D%E8%8C%B6.gif"><link rel="canonical" href="https://huhuha.top/2025/02/09/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E5%8C%97%E8%88%AA%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E4%BA%94/"><link rel="preconnect" href="//cdn.cbd.int"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="manifest" href="/manifest.json"/><meta name="msapplication-TileColor" content="var(--anzhiyu-main)"/><link rel="mask-icon" href="/images/%E5%B8%9D%E5%90%9B%E5%96%9D%E8%8C%B6.gif" color="#5bbad5"/><link rel="apple-touch-icon" sizes="180x180" href="/images/%E5%B8%9D%E5%90%9B%E5%96%9D%E8%8C%B6.gif"/><link rel="apple-touch-icon-precomposed" sizes="180x180" href="/images/%E5%B8%9D%E5%90%9B%E5%96%9D%E8%8C%B6.gif"/><link rel="icon" type="image/png" sizes="32x32" href="/images/%E5%B8%9D%E5%90%9B%E5%96%9D%E8%8C%B6.gif"/><link rel="icon" type="image/png" sizes="16x16" href="/images/%E5%B8%9D%E5%90%9B%E5%96%9D%E8%8C%B6.gif"/><link rel="bookmark" href="/images/%E5%B8%9D%E5%90%9B%E5%96%9D%E8%8C%B6.gif"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2048-2732.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2732-2048.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1668-2388.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2388-1668.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1536-2048.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2048-1536.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1668-2224.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2224-1668.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1620-2160.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2160-1620.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1290-2796.jpg" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2796-1290.jpg" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1179-2556.jpg" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2556-1179.jpg" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1284-2778.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2778-1284.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1170-2532.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2532-1170.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1125-2436.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2436-1125.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1242-2688.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2688-1242.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-828-1792.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1792-828.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1242-2208.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2208-1242.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-750-1334.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1334-750.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-640-1136.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: {"enable":true,"title":"与数百名博主无限进步","addFriendPlaceholder":"昵称（请勿包含博客等字样）：\n网站地址（要求博客地址，请勿提交个人主页）：\n头像图片url（请提供尽可能清晰的图片，我会上传到我自己的图床）：\n描述：\n站点截图（可选）：\n"},
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2024/07/27/125766904/ba62475f396df9de3316a08ed9e65d86_5680958632268053399..png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"🗺️风向已记录在航海日志，下次再见！","backTitle":"🛡️防御工事运作正常"},
+  LA51: undefined,
+  greetingBox: {"enable":true,"default":"🌰火堆噼啪作响，烤棉花糖的树枝已经削好啦","list":[{"greeting":"🌙星星在守夜，三只毛茸茸挤成团取暖","startTime":0,"endTime":5},{"greeting":"🌄露水收集罐满当当，晾着晒干的蘑菇串","startTime":6,"endTime":8},{"greeting":"🧺晒着太阳的干草堆，蜜蜂在篱笆外哼歌巡逻","startTime":9,"endTime":11},{"greeting":"🏰午休时间？扩建水下基地的好时机","startTime":12,"endTime":14},{"greeting":"柴火堆成小雪山，篱笆外插满了吓唬野猪的稻草人","startTime":15,"endTime":18},{"greeting":"🗡️夜巡开始！","startTime":19,"endTime":21},{"greeting":"🧶窗台摆满驱赶黑暗的萤石罐，此刻，被夜幕包围的你是安全的","startTime":22,"endTime":23}]},
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: {"skills":null},
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: fufhaha","link":"链接: ","source":"来源: 仓库","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '仓库',
+  title: '北航刷题笔记 其五',
+  postAI: '',
+  pageFillDescription: '3.函数及应用, 1.自然常数e（math.h）, 2.三次方根（math.h）, 3.全错位排序公式：, 全错位排序的递推公式, 4.while中用于没给出具体循环个数但要读取数的情况：, scanf 的返回值, ~ 运算符, 结合起来的效果, 5.动态规划：, 动态规划的基本思想：, 动态规划的解题步骤：, 动态规划的常见应用场景：, 举个简单的例子：斐波那契数列, 递推法：, 优化的滚动数组法（减少空间复杂度）：, 整数划分问题到底是什么？, 用动态规划来解决, 核心思想, 举例：划分 5, 1. 定义, 2. 如何划分？, 3. 状态转移公式, 特殊情况, 初始化, 举例填表, 表格的含义, eg2., 解题思路, 示例, 输入：, 解释：, 输出：, C代码实现, 代码讲解, 6.求积分的面积：, 辛普森法则（Simpson’s Rule）, 7.计数数组（哈希表）：用于专门计数组中元素出现的次数：, 8.将10进制转换为n进制：用数组（就是不断地取余每次商更新最后结果倒序输出）, 9.如果要将数字或者字母转换为字符, 10.遇到整体错位问题可以往矩阵方向想（二维数组赋值与初始化一起）, 11.双指针3.2.9, 12.ltstring.hgt, 13.通过 islower 和 isupper 来分别判断字符是小写字母还是大写字母（ctype.h）, 14.绝对值更新：, 15.比较两字符串是否相等：ltstring.hgt, 16.质数也叫素数：是大于1的自然数只能被1和它本身整除的数, 17.对于回形二维数组方位问题3.1.14, 18.指针所代表的地址的值是只有一个的所以更改就算再函数中也会更改到本体, 19.动态内存分配, 20ltstring.hgt头文件中 查找数组中的某部分 和 替换数组中的某部分, strstr(), strncpy(), 21.char *month[] x3D { January February March April May June July August September October November December }, 字符串与字符的区别：, 22.strtok(buffer  \n) x2Fx2F 分割输入字符串为单词strcpy(strArray[n] word)  x2Fx2F 复制单词到 strArray, 23.取余%会一直除除到底, 24.汉诺塔, 递归关系：, 25.约瑟夫问题：, 约瑟夫问题通俗解释, 解法思路, 核心步骤, 伪代码, 示例, C代码实现, 关键点讲解, 26.方向数组（面对具有方向的二维问题时）, 解题思路, 代码实现, 代码解析, 27.dfs（3.2.28）, 28.计算一个已知各顶点的多边形面积：, 29.结构体排序, 30.链表：, 31.哈希表：, 哈希表的核心概念, 这段代码中哈希表的具体用途, 32.田忌赛马策略（贪心）：如果我方最强大于敌方最强则+否则用我方最弱消耗对方最强函数及应用自然常数三次方根全错位排序公式全错位排序是指一个排列中所有元素的位置都不与其原位置相同的排列方式换句话说对于一个有个元素的排列要求每个元素都不出现在其原本的位置上全错位排序的递推公式对于给定的全错位排序的数目可以通过递推公式来计算公式为其中表示有个元素的全错位排列数即零个元素的全错位排列数为通常定义为即一个元素没有全错位排列中用于没给出具体循环个数但要读取数的情况是一个常见的用法通常用于读取整数输入直到输入结束让我们详细分析一下这个表达式的含义的返回值函数用于从标准输入读取数据并将读取到的数据存储到指定的变量中的返回值是成功读取的输入项的数量例如如果成功读取了一个整数会返回如果输入无法匹配格式或者读取失败会返回通常是运算符是按位取反运算符它将操作数的每一位反转对于的返回值或将会执行如下操作如果返回表示成功读取了一个整数那么等于这是一个真值非零表示循环继续如果返回表示输入结束或错误那么等于这是假值表示循环终止结合起来的效果这个循环的含义是一般用于读个数如果成功读取一个整数那么为非零值条件成立循环继续如果读取失败如遇到输入结束或错误为零循环终止动态规划动态规划简称是一种求解复杂问题的算法思想适用于具有重叠子问题和最优子结构性质的问题它通过将问题分解为更小的子问题存储子问题的解并加以重用从而避免重复计算提高效率动态规划的基本思想重叠子问题将原问题拆分成多个子问题许多子问题会重复出现通过记忆化或者表格化存储已解决的子问题结果避免重复计算最优子结构问题的全局最优解可以通过子问题的最优解来构造例如最短路径问题的某条路径如果是最优路径那么它的任意子路径也是最优的状态转移方程动态规划通过状态转移方程从较小规模的问题推导出较大规模问题的解状态转移方程是动态规划的核心动态规划的解题步骤明确状态定义子问题的状态用状态描述当前所处的子问题状态转移方程推导状态之间的递推关系找到如何通过子问题的解得到当前问题的解初始化为状态表或记忆化数组设置初始条件填表或递归通过递归或迭代的方式求解问题返回结果通常结果在状态表的最后一格或者通过递归的返回值获取动态规划的常见应用场景线性问题最长公共子序列最长递增子序列背包问题区间问题戳气球问题石子合并问题路径问题矩阵最小路径和最短路径问题字符串问题最小编辑距离正则匹配举个简单的例子斐波那契数列斐波那契数列的递推关系为我们可以用动态规划的方法来求解递推法初始化状态转移方程返回结果优化的滚动数组法减少空间复杂度复制编辑动态规划的本质在于化繁为简避免重复它是一种非常强大的算法工具广泛应用于计算机科学和工程领域整数划分问题到底是什么假设我们有一个数字想把它分成若干个正整数相加比如时可以分成我们的目标是数一数有多少种不同的划分方法规则数字的顺序不重要比如和算作同一种每种划分中每个数字的大小不能超过原来的数字用动态规划来解决核心思想我们一步一步来拆分问题先只用小数字去分比如逐渐允许更大的数字比如允许用直到这样每个小问题的答案就可以帮我们解决更大的问题举例划分定义用表示把数字划分成最大加数不超过的方法数比如表示把划分成最大加数不超过的方法数表示把划分成最大加数不超的方法数如何划分对于每个我们分两种情况不选最大加数这样的问题就变成了把划分成最大加数不超过的方法数也就是选最大加数那么剩下的部分就是问题变成了把划分成最大加数不超过的方法数也就是状态转移公式把两种情况加起来特殊情况如果最大加数太大了不可能用它所以直接继承前面的结果初始化为了让计算从简单的情况开始我们先规定几个值数字的划分只有一种方案什么都不选数字的划分如果不允许用任何数是不可能的举例填表假设我们要划分构造一个表格逐步填表最后一格表示有种划分方法表格的含义第一列因为正整数不能划分成只有的加数第一行因为数字的划分始终只有一种方案右下角即最终答案解题思路核心概念背包的操作类似于一个固定大小的队列当背包未满时直接加入新素材当背包已满时移除最早加入的素材腾出空间存放新素材算法步骤用一个队列数组实现模拟背包遍历每个神庙所需的素材如果素材已经在背包中不需要返回仓库如果素材不在背包中如果背包未满将素材加入背包如果背包已满移除最早的素材再将新素材加入背包每次加入新素材都记为一次返回仓库操作数据结构选择背包可以用一个数组来模拟当前背包中的素材可以通过遍历数组来查找线性查找示例输入复制编辑解释初始背包为空依次处理每个素材需要返回仓库背包变为需要返回仓库背包变为需要返回仓库背包变为需要背包满返回仓库移除最早的背包变为需要已经在背包中不返回仓库需要返回仓库移除最早的背包变为需要返回仓库移除最早的背包变为输出复制编辑代码实现复制编辑背包容量和神庙总数神庙所需素材列表模拟背包队列的起点和当前大小返回仓库的次数输入背包容量和神庙数量输入神庙所需素材遍历每个神庙所需的素材检查当前素材是否已经在背包中如果不在背包中需要返回仓库如果背包已满移除最早加入的素材移动队首指针将新素材加入背包输出返回仓库的次数代码讲解队列模拟使用数组模拟固定大小的队列通过指针表示队首位置用计算新素材存放的位置线性查找遍历当前背包的素材检查是否已存在队列操作如果背包未满直接加入新素材如果背包已满移动指针移除最早的素材然后加入新素材返回仓库计数每次加入新素材时计数器求积分的面积辛普森法则辛普森法则用于数值积分适用于计算如下形式的定积分计数数组哈希表用于专门计数组中元素出现的次数开一个专门计数的数组不过这个数组中的是要计数数组中的元素即最后看看需要的次数就输出对应的即可将进制转换为进制用数组就是不断地取余每次商更新最后结果倒序输出函数将十进制数转换为进制存储转换结果的数组结果数组的索引取余数数字直接转换为字符字母转换如将更新为商输出结果时需要倒序打印如果要将数字或者字母转换为字符数字字母或者字母的值是所以加上后就会得到正确的字符当时就是当时就是当时就是依此类推遇到整体错位问题可以往矩阵方向想二维数组赋值与初始化一起双指针用可以直接返回不包括的字符数量通过和来分别判断字符是小写字母还是大写字母这类函数都是基于字符而操作的所以字符串中是数字时如果最后要进行运算也要记得转换一下绝对值更新用于整数类型返回整数的绝对值用于浮动类型返回浮动数的绝对值比较两字符串是否相等是一个标准库函数用来比较两个字符串的前个字符不考虑后续的字符的函数原型是它会逐字符比较和的前个字符如果这两个字符串相等返回值为如果不同它返回一个非零值具体值取决于字符串的差异参数表示从字符串的第个位置开始的子字符串表示第二个字符串表示要比较的字符数也就是字符串的长度比较前个字符质数也叫素数是大于的自然数只能被和它本身整除的数对于回形二维数组方位问题指针所代表的地址的值是只有一个的所以更改就算再函数中也会更改到本体指针值的时候指针要有括号不然会先解指针动态内存分配头文件中查找数组中的某部分和替换数组中的某部分原型功能在目标字符串中查找第一次出现的子字符串返回值返回指向第一次出现的在中的位置的指针如果没有找到返回示例查找是否有替换为输出替换后的字符串原型功能将字符串中的前个字符复制到字符串中参数目标字符串数组源字符串复制的字符数量返回值返回字符串的指针注意事项如果的长度小于会将剩余的空间用填充如果的长度大于或等于只会复制前个字符可能不会在字符串末尾添加所以需要小心处理是一个指向字符串的指针数组这里的是字符类型但是指向字符数组即字符串的指针数组因此每个元素可以存储一个指向字符串的指针具体来说的每个元素是一个字符串的首地址而这个字符串是由多个字符组成的字符串与字符的区别字符一个字符变量用来存储单个字符例如它占用个字节的内存空间示例字符串数组一个字符串是由多个字符组成的字符数组最后会以一个空字符结尾来标志字符串的结束一个字符串是一个字符的集合示例字符串包含个字符包括指向字符串的指针是指向字符的指针可以指向一个字符也可以指向一个字符串即字符数组的首地址在语言中字符串是通过指向字符数组的指针来处理的示例用的时候还是直接打数组就好指向字符串分割输入字符串为单词复制单词到取余会一直除除到底汉诺塔递归关系递归的基本思想是如果只有一个盘子移动一次即可对于先将个盘子从源柱子移动到辅助柱子再将第个盘子从源柱子移动到目标柱子最后再将个盘子从辅助柱子移动到目标柱子因此递归公式为其中表示移动个盘子所需的最少次数约瑟夫问题约瑟夫问题通俗解释场景有个人围成一个圈每个人都有一个编号到从第个人开始报数数到的人出列从圈中移除然后从被移除的下一个人继续报数这样一直重复直到所有人都出列目标输出所有人出列的顺序解法思路可以用数组或列表模拟这个过程核心步骤初始化使用一个数组或列表表示所有人初始时存储每个人的编号到从第个人开始调整索引让数组从开始报数循环报数每次从当前起始位置数个找到被移除的人的索引输出被移除的编号并从数组中删除该人调整起点移除一个人后从下一位继续终止当数组中只剩下一个人时问题结束伪代码定义一个数组长度为存放编号到起始位置数组索引从开始循环执行计算出列位置当前数组长度输出并移除该元素从开始继续当数组为空时停止示例输入执行过程初始队列从编号开始第次数到出列剩余下一个从开始第次数到出列剩余下一个从开始第次数到出列剩余下一个从开始第次数到出列剩余下一个从开始第次数到出列剩余输出代码实现定义数组表示圈中人数初始化每个人的编号起始位置从开始计算出列的位置输出出列编号从出列的那个位置开始再循环移动数组移除出列的人这样虽然数组大小没变但是被踢出去的数移到了最后面关键点讲解数组模拟圈用一个数组来存放剩余的编号通过移动数组来实现移除的效果模运算确保索引不会越界同时实现环状结构调整数组每次有人出列后将后续元素往前移动模拟移除的操作输出顺序每次出列后直接输出该编号最终的输出顺序就是所求结果方向数组面对具有方向的二维问题时这个问题要求我们生成一个的蛇形矩阵矩阵的填充方式是从右上角开始按照顺时针方向填充数字到要实现这一点我们需要根据矩阵的规律进行填充解题思路蛇形矩阵的特点从右上角开始填充数字直到填充规则是顺时针方向开始时从右上角填充接着是下方左方再上方依此循环如何实现我们可以用一个二维数组来表示矩阵使用变量来跟踪当前的填充位置初始化位置为右上角然后按照顺时针方向移动我们可以定义一个方向数组来表示顺时针方向的移动顺序上右下左边界处理在填充过程中要确保每次移动都在矩阵内部如果遇到已经填充的格子应该改变方向代码实现预处理方向为向下向左向上向右时横纵坐标的偏移量在方向上走一步如果当前坐标超过了边界或者是已经填了数字顺时针旋转一个方向然后再走一步代码解析初始化数组用来存储最终的蛇形矩阵所有元素初始化为数组表示顺时针方向的移动顺序分别对应上右下左和分别表示当前填充位置的行和列初始位置为右上角从开始表示当前要填充的数字表示当前的方向初始为向上填充过程使用循环填充矩阵直到填充到每次填充一个数字后计算下一个位置如果下一个位置越界或已经被填充就改变方向顺时针改变方向更新当前位置为和输出完成填充后输出矩阵中的所有元素每行输出个数字标记当前陆地为已访问代表海洋代表陆地遍历四个方向检查是否越界且是否是陆地递归访问相连的陆地计算一个已知各顶点的多边形面积要计算一个凸多边形的面积可以使用叉积法即多边形的面积公式具体来说如果你有一个凸多边形的顶点序列则面积计算公式如下面积其中是即环绕一圈计算结构体排序将指针类型强制转换为指针类型按月份升序排序如果月份相同按日期升序排序如果日期也相同按姓名字典序升序排序多条件的单条件的按月份升序排序等于就是排序的方向用于字符串的比较比较函数用于排序按长度从长到短排序如果长度相同按首字母字典序排序区分大小写链表定义链表节点结构体记录人的编号指向下一个节点创建循环链表第一个节点链接到前一个节点链表首尾相连形成循环链表模拟约瑟夫环直到只剩下一个节点报数到时删除当前节点移动到下一个节点重置计数移动到下一个节点输出最后剩下的人排序算法在的函数中比较函数的返回值控制排序规则返回负值第一个元素排在前面返回正值第二个元素排在前面返回两个元素位置不变哈希表哈希表是一种数据结构用于以键值对的形式存储数据能够快速查找插入或删除数据在这个问题中我们用到的是一个简单的哈希表通过数组模拟用来存储字符和它们的权重或优先级称为哈希索引我们通过这些权重定义一个新的字符比较规则用来对单词进行排序哈希表的核心概念键唯一标识某个数据例如这里我们用字母到和到作为键值与键相关联的数据例如这里用输入的整数表示每个字母的哈希索引值哈希表的功能快速根据键找到对应的值在这道题中哈希表就是一个简单的数组复制编辑这里我们用数组记录每个字符的哈希值优先级存储字符对应的优先级这段代码中哈希表的具体用途输入哈希索引表输入包含个整数分别代表和的优先级通过下面的代码将这些优先级存入数组复制编辑例如复制编辑输入意味着比较两个字符的优先级我们可以通过字符找到这个字符对应的优先级比较两个字符和时复制编辑单词排序每次比较两个单词时按字典规则逐字符比较但字典顺序被优先级表替代例如复制编辑假设输入单词列表排序结果按优先级依次为存储单词的数组哈希索引表自定义比较函数根据哈希值排序按照字符逐个比较哈希值若所有字符的哈希值都相同较短的单词排在前面输入哈希索引表对应的哈希值对应的哈希值输入单词总数输入所有单词使用按照自定义比较函数排序输出排序后的单词田忌赛马策略贪心如果我方最强大于敌方最强则否则用我方最弱消耗对方最强',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: true,
+  postUpdate: '2025-04-06 00:00:00',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="/images/%E5%B8%9D%E5%90%9B%E5%96%9D%E8%8C%B6.gif"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src="/images/帝君喝茶.gif" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src="/images/茶水.gif" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">仓库</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/c/" style="font-size: 1.05rem;">c++<sup>1</sup></a><a href="/tags/c-c/" style="font-size: 1.05rem;">c/c++<sup>11</sup></a><a href="/tags/%E5%88%B7%E9%A2%98/" style="font-size: 1.05rem;">刷题<sup>2</sup></a><a href="/tags/%E5%8C%97%E8%88%AA/" style="font-size: 1.05rem;">北航<sup>6</sup></a><a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 1.05rem;">博客<sup>1</sup></a><a href="/tags/%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB%E7%AE%97%E6%B3%95/" style="font-size: 1.05rem;">图像识别算法<sup>4</sup></a><a href="/tags/%E5%A4%87%E8%B5%9B/" style="font-size: 1.05rem;">备赛<sup>1</sup></a><a href="/tags/%E5%A4%A9%E6%A2%AF%E8%B5%9B/" style="font-size: 1.05rem;">天梯赛<sup>1</sup></a><a href="/tags/%E5%AE%9E%E6%88%98/" style="font-size: 1.05rem;">实战<sup>2</sup></a><a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/" style="font-size: 1.05rem;">嵌入式<sup>1</sup></a><a href="/tags/%E6%8C%87%E5%8D%97/" style="font-size: 1.05rem;">指南<sup>1</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 1.05rem;">数据结构<sup>1</sup></a><a href="/tags/%E6%96%B0%E9%A2%86%E5%9F%9F/" style="font-size: 1.05rem;">新领域<sup>1</sup></a><a href="/tags/%E6%B4%9B%E8%B0%B7/" style="font-size: 1.05rem;">洛谷<sup>3</sup></a><a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 1.05rem;">深度学习<sup>4</sup></a><a href="/tags/%E6%B8%B8%E6%88%8F%E5%B0%8F%E9%A1%B9%E7%9B%AE/" style="font-size: 1.05rem;">游戏小项目<sup>1</sup></a><a href="/tags/%E6%B9%96%E5%8D%97%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6/" style="font-size: 1.05rem;">湖南工业大学<sup>1</sup></a><a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 1.05rem;">笔记<sup>13</sup></a><a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 1.05rem;">算法<sup>5</sup></a><a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/" style="font-size: 1.05rem;">蓝桥杯<sup>1</sup></a><a href="/tags/%E9%A1%B9%E7%9B%AE%E8%AE%B2%E8%A7%A3/" style="font-size: 1.05rem;">项目讲解<sup>2</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/04/"><span class="card-archive-list-date">四月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">6</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/03/"><span class="card-archive-list-date">三月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/02/"><span class="card-archive-list-date">二月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">10</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/01/"><span class="card-archive-list-date">一月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/11/"><span class="card-archive-list-date">十一月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/10/"><span class="card-archive-list-date">十月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>笔记</span></a><a class="article-meta__tags" href="/tags/c-c/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>c/c++</span></a><a class="article-meta__tags" href="/tags/%E5%8C%97%E8%88%AA/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>北航</span></a></span></div></div><h1 class="post-title" itemprop="name headline">北航刷题笔记 其五</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2025-02-08T16:00:00.000Z" title="发表于 2025-02-09 00:00:00">2025-02-09</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2025-04-05T16:00:00.000Z" title="更新于 2025-04-06 00:00:00">2025-04-06</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-pv-cv" id="" data-flag-title="北航刷题笔记 其五"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="busuanzi_value_page_pv"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为长沙"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>长沙</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="/images/202504071512548.jpg"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://huhuha.top/2025/02/09/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E5%8C%97%E8%88%AA%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E4%BA%94/"><header><a href="/tags/%E7%AC%94%E8%AE%B0/" tabindex="-1" itemprop="url">笔记</a><a href="/tags/c-c/" tabindex="-1" itemprop="url">c/c++</a><a href="/tags/%E5%8C%97%E8%88%AA/" tabindex="-1" itemprop="url">北航</a><h1 id="CrawlerTitle" itemprop="name headline">北航刷题笔记 其五</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">fufhaha</span><time itemprop="dateCreated datePublished" datetime="2025-02-08T16:00:00.000Z" title="发表于 2025-02-09 00:00:00">2025-02-09</time><time itemprop="dateCreated datePublished" datetime="2025-04-05T16:00:00.000Z" title="更新于 2025-04-06 00:00:00">2025-04-06</time></header><h1 id="3-函数及应用"><a href="#3-函数及应用" class="headerlink" title="3.函数及应用"></a>3.函数及应用</h1><h2 id="1-自然常数e（math-h）"><a href="#1-自然常数e（math-h）" class="headerlink" title="1.自然常数e（math.h）"></a>1.自然常数e（math.h）</h2><p><strong>exp(1)</strong></p>
+<h2 id="2-三次方根（math-h）"><a href="#2-三次方根（math-h）" class="headerlink" title="2.三次方根（math.h）"></a>2.三次方根（math.h）</h2><p><strong>cbrt(x)</strong></p>
+<h2 id="3-全错位排序公式："><a href="#3-全错位排序公式：" class="headerlink" title="3.全错位排序公式："></a>3.全错位排序公式：</h2><p><strong>全错位排序（Derangement）</strong> 是指一个排列中，所有元素的位置都不与其原位置相同的排列方式。换句话说，对于一个有 <code>n</code> 个元素的排列，要求每个元素都不出现在其原本的位置上。</p>
+<h3 id="全错位排序的递推公式"><a href="#全错位排序的递推公式" class="headerlink" title="全错位排序的递推公式"></a>全错位排序的递推公式</h3><p>对于给定的 <code>n</code>，全错位排序的数目可以通过递推公式来计算，公式为：<br>$$<br>D_n &#x3D; (n - 1) \times (D_{n-1} + D_{n-2})<br>$$<br>其中：</p>
+<ul>
+<li><code>D_n</code> 表示有 <code>n</code> 个元素的全错位排列数。</li>
+<li><code>D_0 = 1</code>，即零个元素的全错位排列数为 <code>1</code>（通常定义为1）。</li>
+<li><code>D_1 = 0</code>，即一个元素没有全错位排列。</li>
+</ul>
+<h2 id="4-while中用于没给出具体循环个数但要读取数的情况："><a href="#4-while中用于没给出具体循环个数但要读取数的情况：" class="headerlink" title="4.while中用于没给出具体循环个数但要读取数的情况："></a>4.while中用于没给出具体循环个数但要读取数的情况：</h2><p><code>~scanf(&quot;%d&quot;, &amp;n)</code> 是一个常见的用法，通常用于读取整数输入直到输入结束。让我们详细分析一下这个表达式的含义。</p>
+<h3 id="scanf-的返回值"><a href="#scanf-的返回值" class="headerlink" title="scanf 的返回值"></a><code>scanf</code> 的返回值</h3><p><code>scanf</code> 函数用于从标准输入读取数据，并将读取到的数据存储到指定的变量中。<code>scanf</code> 的返回值是成功读取的输入项的数量。例如：</p>
+<ul>
+<li>如果成功读取了一个整数，<code>scanf</code> 会返回 <code>1</code>。</li>
+<li>如果输入无法匹配格式，或者读取失败，<code>scanf</code> 会返回 <code>EOF</code>（通常是 <code>-1</code>）。</li>
+</ul>
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="~ 运算符"></a><code>~</code> 运算符</h3><p><code>~</code> 是按位取反运算符，它将操作数的每一位反转。对于 <code>scanf</code> 的返回值 <code>1</code> 或 <code>EOF</code>，<code>~scanf</code> 将会执行如下操作：</p>
+<ul>
+<li>如果 <code>scanf</code> 返回 <code>1</code>（表示成功读取了一个整数），那么 <code>~1</code> 等于 <code>-2</code>，这是一个真值（非零），表示循环继续。</li>
+<li>如果 <code>scanf</code> 返回 <code>EOF</code>（表示输入结束或错误），那么 <code>~EOF</code> 等于 <code>0</code>，这是假值，表示循环终止。</li>
+</ul>
+<h3 id="结合起来的效果"><a href="#结合起来的效果" class="headerlink" title="结合起来的效果"></a>结合起来的效果</h3><p><strong><code>while (~scanf(&quot;%d&quot;, &amp;n))</code></strong> 这个循环的含义是：<strong>（一般用于读1个数）</strong></p>
+<ul>
+<li><strong>如果 <code>scanf</code> 成功读取一个整数</strong>，那么 <code>~scanf(&quot;%d&quot;, &amp;n)</code> 为非零值，条件成立，循环继续。</li>
+<li><strong>如果 <code>scanf</code> 读取失败（如遇到输入结束或错误）</strong>，<code>~scanf(&quot;%d&quot;, &amp;n)</code> 为零，循环终止</li>
+</ul>
+<h2 id="5-动态规划："><a href="#5-动态规划：" class="headerlink" title="5.动态规划："></a>5.动态规划：</h2><p>动态规划（Dynamic Programming，简称 DP）是一种求解复杂问题的算法思想，适用于<strong>具有重叠子问题和最优子结构性质</strong>的问题。它通过将问题分解为更小的子问题，存储子问题的解并加以重用，从而避免重复计算，提高效率。</p>
+<hr>
+<h3 id="动态规划的基本思想："><a href="#动态规划的基本思想：" class="headerlink" title="动态规划的基本思想："></a>动态规划的基本思想：</h3><ol>
+<li><strong>重叠子问题</strong><br>将原问题<strong>拆分成多个子问题</strong>，许多子问题会重复出现。通过记忆化（Memoization）或者表格化（Tabulation），存储已解决的子问题结果，避免重复计算。</li>
+<li><strong>最优子结构</strong><br>问题的全局最优解可以通过子问题的最优解来构造。例如，最短路径问题的某条路径如果是最优路径，那么它的任意子路径也是最优的。</li>
+<li><strong>状态转移方程</strong><br>动态规划通过<strong>状态转移方程</strong>从较小规模的问题推导出较大规模问题的解。状态转移方程是动态规划的核心。</li>
+</ol>
+<hr>
+<h3 id="动态规划的解题步骤："><a href="#动态规划的解题步骤：" class="headerlink" title="动态规划的解题步骤："></a>动态规划的解题步骤：</h3><ol>
+<li><strong>明确状态</strong><br>定义子问题的状态，用状态描述当前所处的子问题。</li>
+<li><strong>状态转移方程</strong><br>推导状态之间的递推关系，找到如何通过子问题的解得到当前问题的解。</li>
+<li><strong>初始化</strong><br>为状态表或记忆化数组设置初始条件。</li>
+<li><strong>填表或递归</strong><br>通过递归或迭代的方式求解问题。</li>
+<li><strong>返回结果</strong><br>通常结果在状态表的最后一格，或者通过递归的返回值获取。</li>
+</ol>
+<hr>
+<h3 id="动态规划的常见应用场景："><a href="#动态规划的常见应用场景：" class="headerlink" title="动态规划的常见应用场景："></a>动态规划的常见应用场景：</h3><ol>
+<li><strong>线性问题</strong><ul>
+<li>最长公共子序列（LCS）</li>
+<li>最长递增子序列（LIS）</li>
+<li>背包问题</li>
+</ul>
+</li>
+<li><strong>区间问题</strong><ul>
+<li>戳气球问题</li>
+<li>石子合并问题</li>
+</ul>
+</li>
+<li><strong>路径问题</strong><ul>
+<li>矩阵最小路径和</li>
+<li>最短路径问题</li>
+</ul>
+</li>
+<li><strong>字符串问题</strong><ul>
+<li>最小编辑距离</li>
+<li>正则匹配</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="举个简单的例子：斐波那契数列"><a href="#举个简单的例子：斐波那契数列" class="headerlink" title="举个简单的例子：斐波那契数列"></a>举个简单的例子：斐波那契数列</h3><p>斐波那契数列的递推关系为：<br>$$<br>F(n) &#x3D; F(n-1) + F(n-2)<br>$$<br>我们可以用动态规划的方法来求解：</p>
+<h4 id="递推法："><a href="#递推法：" class="headerlink" title="递推法："></a>递推法：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int fibonacci(int n) &#123;</span><br><span class="line">    if (n &lt;= 1) return n;  // 初始化</span><br><span class="line">    int dp[n + 1];</span><br><span class="line">    dp[0] = 0; </span><br><span class="line">    dp[1] = 1; </span><br><span class="line">    for (int i = 2; i &lt;= n; i++) &#123;</span><br><span class="line">        dp[i] = dp[i - 1] + dp[i - 2];  // 状态转移方程</span><br><span class="line">    &#125;</span><br><span class="line">    return dp[n];  // 返回结果</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    int n = 10;</span><br><span class="line">    cout &lt;&lt; &quot;Fibonacci(&quot; &lt;&lt; n &lt;&lt; &quot;) = &quot; &lt;&lt; fibonacci(n) &lt;&lt; endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="优化的滚动数组法（减少空间复杂度）："><a href="#优化的滚动数组法（减少空间复杂度）：" class="headerlink" title="优化的滚动数组法（减少空间复杂度）："></a>优化的滚动数组法（减少空间复杂度）：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">cpp复制编辑int fibonacciOptimized(int n) &#123;</span><br><span class="line">    if (n &lt;= 1) return n;</span><br><span class="line">    int prev1 = 1, prev2 = 0, current;</span><br><span class="line">    for (int i = 2; i &lt;= n; i++) &#123;</span><br><span class="line">        current = prev1 + prev2;</span><br><span class="line">        prev2 = prev1;</span><br><span class="line">        prev1 = current;</span><br><span class="line">    &#125;</span><br><span class="line">    return current;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>动态规划的本质在于<strong>化繁为简，避免重复</strong>，它是一种非常强大的算法工具，广泛应用于计算机科学和工程领域！</p>
+<h3 id="整数划分问题到底是什么？"><a href="#整数划分问题到底是什么？" class="headerlink" title="整数划分问题到底是什么？"></a>整数划分问题到底是什么？</h3><p>假设我们有一个数字 n，想把它分成若干个正整数相加，比如：</p>
+<ul>
+<li><p>n&#x3D;5</p>
+<p> 时，可以分成：</p>
+<ul>
+<li>5</li>
+<li>4 + 1</li>
+<li>3 + 2</li>
+<li>3 + 1 + 1</li>
+<li>2 + 2 + 1</li>
+<li>2 + 1 + 1 + 1</li>
+<li>1 + 1 + 1 + 1 + 1</li>
+</ul>
+</li>
+</ul>
+<p>我们的目标是<strong>数一数有多少种不同的划分方法</strong>。</p>
+<p><strong>规则：</strong></p>
+<ol>
+<li>数字的顺序不重要（比如 4+14 + 14+1 和 1+41 + 41+4 算作同一种）。</li>
+<li>每种划分中，每个数字的大小不能超过原来的数字 n。</li>
+</ol>
+<hr>
+<h3 id="用动态规划来解决"><a href="#用动态规划来解决" class="headerlink" title="用动态规划来解决"></a>用动态规划来解决</h3><h4 id="核心思想"><a href="#核心思想" class="headerlink" title="核心思想"></a>核心思想</h4><p>我们一步一步来拆分问题：</p>
+<ol>
+<li><strong>先只用小数字去分</strong>：比如 1。</li>
+<li><strong>逐渐允许更大的数字</strong>：比如允许用 2，3……直到 n。</li>
+</ol>
+<p>这样，每个小问题的答案就可以帮我们解决更大的问题。</p>
+<hr>
+<h3 id="举例：划分-5"><a href="#举例：划分-5" class="headerlink" title="举例：划分 5"></a>举例：划分 5</h3><h4 id="1-定义"><a href="#1-定义" class="headerlink" title="1. 定义"></a>1. 定义</h4><p>用 dp[i][j]dp[i][j]dp[i][j] 表示：<strong>把数字 iii 划分成最大加数不超过 jjj 的方法数</strong>。</p>
+<p>比如：</p>
+<ul>
+<li>dp[5] [5] 表示把 5 划分成最大加数不超过 5 的方法数。</li>
+<li>dp [5] [3] 表示把 5 划分成最大加数不超3的方法数。</li>
+</ul>
+<hr>
+<h4 id="2-如何划分？"><a href="#2-如何划分？" class="headerlink" title="2. 如何划分？"></a>2. 如何划分？</h4><p>对于每个 dp[i][j]dp[i][j]dp[i][j]，我们分两种情况：</p>
+<ol>
+<li><p><strong>不选最大加数 jjj</strong>：</p>
+<ul>
+<li>这样的问题就变成了 “把 i 划分成最大加数不超过 j−1的方法数”，也就是<br>$$<br>dp[i][j−1]<br>$$</li>
+</ul>
+</li>
+<li><p><strong>选最大加数 jjj</strong>：</p>
+<ul>
+<li>那么剩下的部分就是 i−j，问题变成了 “把 i−j划分成最大加数不超过 jjj 的方法数”，也就是<br>$$<br>dp[i−j][j]<br>$$</li>
+</ul>
+</li>
+</ol>
+<h4 id="3-状态转移公式"><a href="#3-状态转移公式" class="headerlink" title="3. 状态转移公式"></a>3. 状态转移公式</h4><p>把两种情况加起来：<br>$$<br>dp[i][j]&#x3D;dp[i][j−1]+dp[i−j][j]<br>$$</p>
+<h4 id="特殊情况"><a href="#特殊情况" class="headerlink" title="特殊情况"></a>特殊情况</h4><ul>
+<li>如果 j&gt;ij &gt; ij&gt;i：最大加数 jjj 太大了，不可能用它，所以直接继承前面的结果：dp[i][j]&#x3D;dp[i][j−1]dp[i][j] &#x3D; dp[i][j-1]dp[i][j]&#x3D;dp[i][j−1]。</li>
+</ul>
+<hr>
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>为了让计算从简单的情况开始，我们先规定几个值：</p>
+<ol>
+<li>**<code>dp[0][j] = 1</code>**：数字 0 的划分只有一种方案——什么都不选。</li>
+<li>**<code>dp[i][0] = 0</code>**：数字 i&gt;0i &gt; 0i&gt;0 的划分如果不允许用任何数，是不可能的。</li>
+</ol>
+<hr>
+<h3 id="举例填表"><a href="#举例填表" class="headerlink" title="举例填表"></a>举例填表</h3><p>假设我们要划分 n&#x3D;5n &#x3D; 5n&#x3D;5，构造一个表格，逐步填表。</p>
+<table>
+<thead>
+<tr>
+<th>i&#x2F;j</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0</td>
+<td>1</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0</td>
+<td>1</td>
+<td>3</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+</tbody></table>
+<p>最后一格<br>$$<br>dp[5][5]&#x3D;7<br>$$<br>，表示有 7 种划分方法。</p>
+<hr>
+<h3 id="表格的含义"><a href="#表格的含义" class="headerlink" title="表格的含义"></a>表格的含义</h3><ol>
+<li><strong>第一列</strong>：<code>dp[i][0] = 0</code>，因为正整数不能划分成只有 0 的加数。</li>
+<li><strong>第一行</strong>：<code>dp[0][j] = 1</code>，因为数字 0 的划分始终只有一种方案。</li>
+<li><strong>右下角</strong>：<code>dp[5][5] = 7</code>，即最终答案。</li>
+</ol>
+<h3 id="eg2"><a href="#eg2" class="headerlink" title="eg2."></a><strong>eg2.</strong></h3><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><ol>
+<li><strong>核心概念</strong>：<ul>
+<li>背包的操作类似于一个固定大小的队列。</li>
+<li>当背包未满时，直接加入新素材。</li>
+<li>当背包已满时，移除最早加入的素材，腾出空间存放新素材。</li>
+</ul>
+</li>
+<li><strong>算法步骤</strong>：<ul>
+<li>用一个队列（数组实现）模拟背包。</li>
+<li>遍历每个神庙所需的素材：<ul>
+<li>如果素材已经在背包中，不需要返回仓库。</li>
+<li>如果素材不在背包中：<ul>
+<li>如果背包未满，将素材加入背包。</li>
+<li>如果背包已满，移除最早的素材，再将新素材加入背包。</li>
+<li>每次加入新素材，都记为一次返回仓库操作。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>数据结构选择</strong>：<ul>
+<li>背包可以用一个数组来模拟。</li>
+<li>当前背包中的素材可以通过遍历数组来查找（线性查找）。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><h4 id="输入："><a href="#输入：" class="headerlink" title="输入："></a>输入：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">复制编辑3 7</span><br><span class="line">1 2 3 4 2 1 5</span><br></pre></td></tr></table></figure>
+
+<h4 id="解释："><a href="#解释：" class="headerlink" title="解释："></a>解释：</h4><ol>
+<li>初始背包为空，依次处理每个素材：<ul>
+<li>需要 1：返回仓库，背包变为 <code>[1]</code>。</li>
+<li>需要 2：返回仓库，背包变为 <code>[1, 2]</code>。</li>
+<li>需要 3：返回仓库，背包变为 <code>[1, 2, 3]</code>。</li>
+<li>需要 4：背包满，返回仓库，移除最早的 1，背包变为 <code>[2, 3, 4]</code>。</li>
+<li>需要 2：已经在背包中，不返回仓库。</li>
+<li>需要 1：返回仓库，移除最早的 3，背包变为 <code>[4, 2, 1]</code>。</li>
+<li>需要 5：返回仓库，移除最早的 4，背包变为 <code>[2, 1, 5]</code>。</li>
+</ul>
+</li>
+</ol>
+<h4 id="输出："><a href="#输出：" class="headerlink" title="输出："></a>输出：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">复制编辑</span><br><span class="line">5</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="C代码实现"><a href="#C代码实现" class="headerlink" title="C代码实现"></a>C代码实现</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">c复制编辑#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;stdbool.h&gt;</span><br><span class="line"></span><br><span class="line">#define MAXN 1010</span><br><span class="line">#define MAXM 110</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    int M, N; // 背包容量和神庙总数</span><br><span class="line">    int materials[MAXN]; // 神庙所需素材列表</span><br><span class="line">    int backpack[MAXM]; // 模拟背包</span><br><span class="line">    int front = 0, size = 0; // 队列的起点和当前大小</span><br><span class="line">    int warehouse_count = 0; // 返回仓库的次数</span><br><span class="line"></span><br><span class="line">    // 输入背包容量和神庙数量</span><br><span class="line">    scanf(&quot;%d %d&quot;, &amp;M, &amp;N);</span><br><span class="line"></span><br><span class="line">    // 输入神庙所需素材</span><br><span class="line">    for (int i = 0; i &lt; N; i++) &#123;</span><br><span class="line">        scanf(&quot;%d&quot;, &amp;materials[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 遍历每个神庙所需的素材</span><br><span class="line">    for (int i = 0; i &lt; N; i++) &#123;</span><br><span class="line">        int material = materials[i];</span><br><span class="line">        bool found = false;</span><br><span class="line"></span><br><span class="line">        // 检查当前素材是否已经在背包中</span><br><span class="line">        for (int j = 0; j &lt; size; j++) &#123;</span><br><span class="line">            if (backpack[(front + j) % M] == material) &#123;</span><br><span class="line">                found = true;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 如果不在背包中，需要返回仓库</span><br><span class="line">        if (!found) &#123;</span><br><span class="line">            warehouse_count++;</span><br><span class="line"></span><br><span class="line">            // 如果背包已满，移除最早加入的素材</span><br><span class="line">            if (size == M) &#123;</span><br><span class="line">                front = (front + 1) % M; // 移动队首指针</span><br><span class="line">                size--;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            // 将新素材加入背包</span><br><span class="line">            backpack[(front + size) % M] = material;</span><br><span class="line">            size++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 输出返回仓库的次数</span><br><span class="line">    printf(&quot;%d\n&quot;, warehouse_count);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="代码讲解"><a href="#代码讲解" class="headerlink" title="代码讲解"></a>代码讲解</h3><ol>
+<li><strong>队列模拟</strong>：<ul>
+<li>使用数组 <code>backpack</code> 模拟固定大小的队列。</li>
+<li>通过 <code>front</code> 指针表示队首位置。</li>
+<li>用 <code>(front + size) % M</code> 计算新素材存放的位置。</li>
+</ul>
+</li>
+<li><strong>线性查找</strong>：<ul>
+<li>遍历当前背包的素材，检查是否已存在。</li>
+</ul>
+</li>
+<li><strong>队列操作</strong>：<ul>
+<li>如果背包未满，直接加入新素材。</li>
+<li>如果背包已满，移动 <code>front</code> 指针移除最早的素材，然后加入新素材。</li>
+</ul>
+</li>
+<li><strong>返回仓库计数</strong>：<ul>
+<li>每次加入新素材时，计数器 <code>warehouse_count++</code>。</li>
+</ul>
+</li>
+</ol>
+<h2 id="6-求积分的面积："><a href="#6-求积分的面积：" class="headerlink" title="6.求积分的面积："></a>6.求积分的面积：</h2><h3 id="辛普森法则（Simpson’s-Rule）"><a href="#辛普森法则（Simpson’s-Rule）" class="headerlink" title="辛普森法则（Simpson’s Rule）"></a>辛普森法则（Simpson’s Rule）</h3><p>辛普森法则用于数值积分，适用于计算如下形式的定积分：<br>$$<br>\int_{a}^{b} f(x) , dx \approx \frac{b - a}{6} \left( f(a) + 4f\left(\frac{a + b}{2}\right) + f(b) \right)<br>$$</p>
+<h2 id="7-计数数组（哈希表）：用于专门计数组中元素出现的次数："><a href="#7-计数数组（哈希表）：用于专门计数组中元素出现的次数：" class="headerlink" title="7.计数数组（哈希表）：用于专门计数组中元素出现的次数："></a>7.计数数组（哈希表）：用于专门计数组中元素出现的次数：</h2><p>开一个专门计数的数组，不过这个数组s[n]中的<strong>n是要计数数组中</strong>的元素，**即s[a[i]]<strong>，最后看看</strong>需要的次数就输出对应的a[i]**即可</p>
+<h2 id="8-将10进制转换为n进制：用数组（就是不断地取余，每次商更新，最后结果倒序输出）"><a href="#8-将10进制转换为n进制：用数组（就是不断地取余，每次商更新，最后结果倒序输出）" class="headerlink" title="8.将10进制转换为n进制：用数组（就是不断地取余，每次商更新，最后结果倒序输出）"></a>8.将10进制转换为n进制：用数组（就是不断地取余，每次商更新，最后结果倒序输出）</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 函数：将十进制数转换为n进制</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">decimalToBaseN</span><span class="params">(<span class="type">int</span> num, <span class="type">int</span> base)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (num == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;0&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">char</span> result[<span class="number">32</span>];  <span class="comment">// 存储转换结果的数组</span></span><br><span class="line">    <span class="type">int</span> index = <span class="number">0</span>;     <span class="comment">// 结果数组的索引</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (num &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="type">int</span> remainder = num % base;   <span class="comment">// 取余数</span></span><br><span class="line">        <span class="keyword">if</span> (remainder &lt; <span class="number">10</span>) &#123;</span><br><span class="line">            result[index++] = remainder + <span class="string">&#x27;0&#x27;</span>;  <span class="comment">// 数字直接转换为字符</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            result[index++] = remainder - <span class="number">10</span> + <span class="string">&#x27;A&#x27;</span>;  <span class="comment">// 字母转换（如：A、B、C...）</span></span><br><span class="line">        &#125;</span><br><span class="line">        num /= base;  <span class="comment">// 将num更新为商</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 输出结果时，需要倒序打印</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = index - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>, result[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="9-如果要将数字或者字母转换为字符"><a href="#9-如果要将数字或者字母转换为字符" class="headerlink" title="9.如果要将数字或者字母转换为字符"></a>9.如果要将数字或者字母转换为字符</h2><p><strong>数字+‘0’</strong></p>
+<p><strong>字母+‘A’</strong>或者<strong>字母+‘a’</strong></p>
+<p><code>&#39;A&#39;</code> 的 ASCII 值是 65，所以加上 <code>&#39;A&#39;</code> 后，<code>remainder - 10 + &#39;A&#39;</code> 就会得到正确的字符：</p>
+<ul>
+<li>当 <code>remainder == 10</code> 时，<code>remainder - 10 + &#39;A&#39;</code> 就是 <code>0 + &#39;A&#39; = &#39;A&#39;</code>；</li>
+<li>当 <code>remainder == 11</code> 时，<code>remainder - 10 + &#39;A&#39;</code> 就是 <code>1 + &#39;A&#39; = &#39;B&#39;</code>；</li>
+<li>当 <code>remainder == 12</code> 时，<code>remainder - 10 + &#39;A&#39;</code> 就是 <code>2 + &#39;A&#39; = &#39;C&#39;</code>；</li>
+<li>依此类推。</li>
+</ul>
+<h2 id="10-遇到整体错位问题，可以往矩阵方向想（二维数组赋值与初始化一起）"><a href="#10-遇到整体错位问题，可以往矩阵方向想（二维数组赋值与初始化一起）" class="headerlink" title="10.遇到整体错位问题，可以往矩阵方向想（二维数组赋值与初始化一起）"></a>10.遇到整体错位问题，可以往矩阵方向想（二维数组赋值与初始化一起）</h2><h2 id="11-双指针3-2-9"><a href="#11-双指针3-2-9" class="headerlink" title="11.双指针3.2.9"></a>11.双指针3.2.9</h2><h2 id="12"><a href="#12" class="headerlink" title="12.&lt;string.h&gt;:"></a>12.&lt;string.h&gt;:</h2><p>用**strlen(s)**可以直接返回不包括‘\0’的字符数量</p>
+<h2 id="13-通过-islower-和-isupper-来分别判断字符是小写字母还是大写字母（ctype-h）"><a href="#13-通过-islower-和-isupper-来分别判断字符是小写字母还是大写字母（ctype-h）" class="headerlink" title="13.通过 islower 和 isupper 来分别判断字符是小写字母还是大写字母（ctype.h）"></a>13.通过 <code>islower</code> 和 <code>isupper</code> 来分别判断字符是小写字母还是大写字母（ctype.h）</h2><p>这类函数都是基于<strong>字符</strong>而操作的</p>
+<p><strong>所以，字符串中是数字时如果最后要进行运算也要记得转换一下</strong></p>
+<h2 id="14-绝对值更新："><a href="#14-绝对值更新：" class="headerlink" title="14.绝对值更新："></a>14.绝对值更新：</h2><p><strong>abs() 用于整数类型，返回整数的绝对值</strong>&lt;stdlib.h&gt;</p>
+<p><strong><code>fabs()</code> 用于浮动类型，返回浮动数的绝对值</strong>（math.h</p>
+<h2 id="15-比较两字符串是否相等："><a href="#15-比较两字符串是否相等：" class="headerlink" title="15.比较两字符串是否相等：&lt;string.h&gt;"></a>15.比较两字符串是否相等：&lt;string.h&gt;</h2><ul>
+<li><p><code>strncmp</code> 是一个标准库函数，用来比较两个字符串的前 <code>n</code> 个字符（不考虑后续的字符）。</p>
+</li>
+<li><pre><code>strncmp
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">的函数原型是：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+int strncmp(const char *str1,  const char *str2,   size_t n);
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  它会逐字符比较 **str1 和 str2 的前 n个字符**：</span><br><span class="line"></span><br><span class="line">  - 如果这两个字符串相等，返回值为 `0`。</span><br><span class="line">  - 如果不同，它返回一个非零值（具体值取决于字符串的差异）。</span><br><span class="line"></span><br><span class="line">### 参数：</span><br><span class="line"></span><br><span class="line">- `&amp;A[i]`：表示从 `A` 字符串的第 `i` 个位置开始的子字符串。</span><br><span class="line">- `B`：表示第二个字符串。</span><br><span class="line">- `b`：表示要比较的字符数，也就是字符串 `B` 的长度。</span><br><span class="line"></span><br><span class="line">```c</span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;string.h&gt;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    char str1[] = &quot;hello&quot;;</span><br><span class="line">    char str2[] = &quot;hell&quot;;</span><br><span class="line">    </span><br><span class="line">    // 比较前4个字符</span><br><span class="line">    if (strncmp(str1, str2, 4) == 0) &#123;</span><br><span class="line">        printf(&quot;The first 4 characters are equal.\n&quot;);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        printf(&quot;The first 4 characters are not equal.\n&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+</ul>
+<h2 id="16-质数，也叫素数：是大于1的自然数，只能被1和它本身整除的数"><a href="#16-质数，也叫素数：是大于1的自然数，只能被1和它本身整除的数" class="headerlink" title="16.质数，也叫素数：是大于1的自然数，只能被1和它本身整除的数"></a>16.质数，也叫素数：是大于1的自然数，只能被1和它本身整除的数</h2><h2 id="17-对于回形二维数组方位问题3-1-14"><a href="#17-对于回形二维数组方位问题3-1-14" class="headerlink" title="17.对于回形二维数组方位问题3.1.14"></a>17.对于回形二维数组方位问题3.1.14</h2><h2 id="18-指针所代表的地址的值是只有一个的，所以更改就算再函数中也会更改到本体"><a href="#18-指针所代表的地址的值是只有一个的，所以更改就算再函数中也会更改到本体" class="headerlink" title="18.指针所代表的地址的值是只有一个的，所以更改就算再函数中也会更改到本体"></a>18.指针所代表的地址的值是只有一个的，所以更改就算再函数中也会更改到本体</h2><p>++指针值的时候，指针要有括号，不然会先解指针。<strong>（*p）++</strong></p>
+<h2 id="19-动态内存分配"><a href="#19-动态内存分配" class="headerlink" title="19.动态内存分配"></a>19.动态内存分配</h2><h2 id="20头文件中-查找数组中的某部分-和-替换数组中的某部分"><a href="#20头文件中-查找数组中的某部分-和-替换数组中的某部分" class="headerlink" title="20&lt;string.h&gt;头文件中 查找数组中的某部分 和 替换数组中的某部分"></a>20&lt;string.h&gt;头文件中 查找数组中的某部分 和 替换数组中的某部分</h2><h3 id="strstr"><a href="#strstr" class="headerlink" title="strstr()"></a><code>strstr()</code></h3><p><strong>原型</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">char *strstr(const char *haystack, const char *needle);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>功能</strong>：在 <code>haystack</code>（目标字符串）中查找第一次出现的 <code>needle</code>（子字符串）。</li>
+<li><strong>返回值</strong>：返回指向第一次出现的 <code>needle</code> 在 <code>haystack</code> 中的位置的指针。如果没有找到，返回 <code>NULL</code>。</li>
+</ul>
+<p><strong>示例</strong>：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (fgets(buf, <span class="keyword">sizeof</span>(buf), <span class="built_in">stdin</span>)) &#123;</span><br><span class="line">        <span class="comment">// 查找是否有 &quot;_xy_&quot;</span></span><br><span class="line">        p = <span class="built_in">strstr</span>(buf, <span class="string">&quot;_xy_&quot;</span>);</span><br><span class="line">        <span class="keyword">if</span> (p) &#123;</span><br><span class="line">            <span class="comment">// 替换 &quot;_xy_&quot; 为 &quot;_ab_&quot;</span></span><br><span class="line">            <span class="built_in">strncpy</span>(p, <span class="string">&quot;_ab_&quot;</span>, <span class="number">4</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 输出替换后的字符串</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>, buf);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="strncpy"><a href="#strncpy" class="headerlink" title="strncpy()"></a><code>strncpy()</code></h3><p><strong>原型</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">char *strncpy(char *dest, const char *src, size_t n);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><strong>功能</strong>：将 <code>src</code> 字符串中的前 <code>n</code> 个字符复制到 <code>dest</code> 字符串中。</p>
+</li>
+<li><p>参数</p>
+<p>：</p>
+<ul>
+<li><code>dest</code>：目标字符串数组。</li>
+<li><code>src</code>：源字符串。</li>
+<li><code>n</code>：复制的字符数量。</li>
+</ul>
+</li>
+<li><p><strong>返回值</strong>：返回 <code>dest</code> 字符串的指针。</p>
+</li>
+</ul>
+<p><strong>注意事项</strong>：</p>
+<ul>
+<li>如果 <code>src</code> 的长度小于 <code>n</code>，<code>strncpy</code> 会将剩余的空间用 <code>\0</code> 填充。</li>
+<li>如果 <code>src</code> 的长度大于或等于 <code>n</code>，<code>strncpy</code> 只会复制前 <code>n</code> 个字符，可能不会在 <code>dest</code> 字符串末尾添加 <code>\0</code>，所以需要小心处理。</li>
+</ul>
+<h2 id="21-char-month-“January”-“February”-“March”-“April”-“May”-“June”-“July”-“August”-“September”-“October”-“November”-“December”"><a href="#21-char-month-“January”-“February”-“March”-“April”-“May”-“June”-“July”-“August”-“September”-“October”-“November”-“December”" class="headerlink" title="21.char *month[] &#x3D; { “January”, “February”, “March”, “April”, “May”, “June”, “July”, “August”, “September”, “October”, “November”, “December” };"></a>21.char *month[] &#x3D; { “January”, “February”, “March”, “April”, “May”, “June”, “July”, “August”, “September”, “October”, “November”, “December” };</h2><p><code>char *month[]</code> 是一个<strong>指向字符串的指针数组</strong>。这里的 <code>char</code> 是字符类型，但 <code>*month[]</code> 是指向字符数组（即字符串）的指针数组，因此每个元素可以存储一个指向字符串的指针。具体来说，<code>char *month[]</code> 的每个元素是一个字符串的首地址，而这个字符串是由多个字符组成的。</p>
+<h3 id="字符串与字符的区别："><a href="#字符串与字符的区别：" class="headerlink" title="字符串与字符的区别："></a>字符串与字符的区别：</h3><ol>
+<li><p><strong>字符（char）</strong>：一个字符变量 <code>char</code> 用来存储单个字符（例如：’a’、’b’、’1’）。它占用 1 个字节的内存空间。</p>
+<p>示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">char c = &#x27;A&#x27;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>字符串（char 数组）</strong>：一个字符串是由多个字符组成的字符数组，最后会以一个空字符 <code>&#39;\0&#39;</code> 结尾来标志字符串的结束。一个字符串是一个字符的集合。</p>
+<p>示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">char str[] = &quot;Hello&quot;; // 字符串 &quot;Hello&quot;，包含 6 个字符（包括 &#x27;\0&#x27;）</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>指向字符串的指针（char*）</strong>：<code>char*</code> 是指向字符的指针，<strong>可以指向一个字符</strong>，<strong>也可以指向一个字符串</strong>（<strong>即字符数组的首地址</strong>）。在 C 语言中，字符串是通过指向字符数组的指针来处理的。</p>
+<p>示例：（<strong>用的时候还是直接打数组[]就好</strong>）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">char *str = &quot;Hello&quot;; // 指向字符串 &quot;Hello&quot;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="22-strtok-buffer-“-n”-分割输入字符串为单词，strcpy-strArray-n-word-复制单词到-strArray"><a href="#22-strtok-buffer-“-n”-分割输入字符串为单词，strcpy-strArray-n-word-复制单词到-strArray" class="headerlink" title="22.strtok(buffer, “ \n”); &#x2F;&#x2F; 分割输入字符串为单词，strcpy(strArray[n], word);  &#x2F;&#x2F; 复制单词到 strArray"></a>22.strtok(buffer, “ \n”); &#x2F;&#x2F; 分割输入字符串为单词，strcpy(strArray[n], word);  &#x2F;&#x2F; 复制单词到 strArray</h2><h2 id="23-取余-会一直除，除到底"><a href="#23-取余-会一直除，除到底" class="headerlink" title="23.取余%会一直除，除到底"></a>23.取余%会一直除，除到底</h2><h2 id="24-汉诺塔"><a href="#24-汉诺塔" class="headerlink" title="24.汉诺塔"></a>24.汉诺塔</h2><h3 id="递归关系："><a href="#递归关系：" class="headerlink" title="递归关系："></a>递归关系：</h3><ul>
+<li>递归的基本思想是：<ul>
+<li>如果只有一个盘子，移动一次即可。</li>
+<li>对于 <code>n &gt; 1</code>，先将 <code>n-1</code> 个盘子从源柱子移动到辅助柱子，再将第 <code>n</code> 个盘子从源柱子移动到目标柱子，最后再将 <code>n-1</code> 个盘子从辅助柱子移动到目标柱子。</li>
+</ul>
+</li>
+</ul>
+<p>因此，递归公式为：</p>
+<ul>
+<li><strong><code>T(n) = 2 * T(n-1) - 1</code>，其中 <code>T(n)</code> 表示移动 <code>n</code> 个盘子所需的最少次数。</strong></li>
+</ul>
+<h2 id="25-约瑟夫问题："><a href="#25-约瑟夫问题：" class="headerlink" title="25.约瑟夫问题："></a>25.约瑟夫问题：</h2><h3 id="约瑟夫问题通俗解释"><a href="#约瑟夫问题通俗解释" class="headerlink" title="约瑟夫问题通俗解释"></a>约瑟夫问题通俗解释</h3><ol>
+<li><strong>场景</strong>：<ul>
+<li>有 n个人围成一个圈，每个人都有一个编号 1 到 n。</li>
+<li>从第 s 个人开始报数。</li>
+<li>数到 m 的人出列（从圈中移除）。</li>
+<li>然后从被移除的下一个人继续报数。</li>
+<li>这样一直重复，直到所有人都出列。</li>
+</ul>
+</li>
+<li><strong>目标</strong>：<br>输出所有人出列的顺序。</li>
+</ol>
+<hr>
+<h3 id="解法思路"><a href="#解法思路" class="headerlink" title="解法思路"></a>解法思路</h3><p>可以用数组或列表模拟这个过程。</p>
+<h4 id="核心步骤"><a href="#核心步骤" class="headerlink" title="核心步骤"></a>核心步骤</h4><ol>
+<li><strong>初始化：</strong><br>使用一个数组（或列表）<code>circle</code> 表示所有人，初始时存储每个人的编号 1 到 n。</li>
+<li><strong>从第 sss 个人开始：</strong><br>调整索引，让数组从s−1 开始报数。</li>
+<li><strong>循环报数：</strong><ul>
+<li>每次从当前起始位置数 m 个。</li>
+<li>找到被移除的人的索引。</li>
+<li>输出被移除的编号，并从数组中删除该人。</li>
+</ul>
+</li>
+<li><strong>调整起点：</strong><br>移除一个人后，从下一位继续。</li>
+<li><strong>终止：</strong><br>当数组中只剩下一个人时，问题结束。</li>
+</ol>
+<hr>
+<h3 id="伪代码"><a href="#伪代码" class="headerlink" title="伪代码"></a>伪代码</h3><ol>
+<li>定义一个数组 <code>circle</code>，长度为 n，存放编号 1 到 n。</li>
+<li>起始位置 <code>pos = s-1</code>（数组索引从 0 开始）。</li>
+<li>循环执行：<ul>
+<li>计算出列位置：<code>pos = (pos + m - 1) % 当前数组长度</code>。</li>
+<li>输出 <code>circle[pos]</code>，并移除该元素。</li>
+<li>从 <code>pos</code> 开始继续。</li>
+</ul>
+</li>
+<li>当数组为空时，停止。</li>
+</ol>
+<hr>
+<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h3><p>输入：<br>n&#x3D;5, s&#x3D;2, m&#x3D;3</p>
+<p>执行过程：</p>
+<ol>
+<li>初始队列：<code>[1, 2, 3, 4, 5]</code>，从编号 2 开始。</li>
+<li>第 1 次：数到 3，出列 4。剩余：<code>[1, 2, 3, 5]</code>，下一个从 5 开始。</li>
+<li>第 2 次：数到 3，出列 3。剩余：<code>[1, 2, 5]</code>，下一个从 5 开始。</li>
+<li>第 3 次：数到 3，出列 2。剩余：<code>[1, 5]</code>，下一个从 1 开始。</li>
+<li>第 4 次：数到 3，出列 5。剩余：<code>[1]</code>，下一个从 1 开始。</li>
+<li>第 5 次：数到 1，出列 1。剩余：<code>[]</code>。</li>
+</ol>
+<p>输出：<br><code>4 3 2 5 1</code></p>
+<hr>
+<h3 id="C代码实现-1"><a href="#C代码实现-1" class="headerlink" title="C代码实现"></a>C代码实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> n, s, m;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>, &amp;n, &amp;s, &amp;m);</span><br><span class="line">    </span><br><span class="line">    <span class="type">int</span> circle[<span class="number">102</span>];  <span class="comment">// 定义数组表示圈中人数</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">        circle[i] = i + <span class="number">1</span>;  <span class="comment">// 初始化每个人的编号</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> pos = s - <span class="number">1</span>;  <span class="comment">// 起始位置（从 0 开始）</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> remaining = n; remaining &gt; <span class="number">0</span>; --remaining) &#123;</span><br><span class="line">        pos = (pos + m - <span class="number">1</span>) % remaining;  <span class="comment">// 计算出列的位置</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, circle[pos]);     <span class="comment">// 输出出列编号</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = pos; j &lt; remaining - <span class="number">1</span>; ++j) &#123;<span class="comment">//从出列的那个位置开始再循环</span></span><br><span class="line">            circle[j] = circle[j + <span class="number">1</span>];   <span class="comment">// 移动数组，移除出列的人，这样，虽然数组大小没变，但是被踢出去的数移到了最后面</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="关键点讲解"><a href="#关键点讲解" class="headerlink" title="关键点讲解"></a>关键点讲解</h3><ol>
+<li><strong>数组模拟圈：</strong><br>用一个数组来存放剩余的编号，通过移动数组来实现“移除”的效果。</li>
+<li><strong>模运算：</strong><br><code>pos = (pos + m - 1) % remaining</code> 确保索引不会越界，同时实现环状结构。</li>
+<li><strong>调整数组：</strong><br>每次有人出列后，将后续元素往前移动，模拟“移除”的操作。</li>
+<li><strong>输出顺序：</strong><br>每次出列后直接输出该编号，最终的输出顺序就是所求结果。</li>
+</ol>
+<h2 id="26-方向数组（面对具有方向的二维问题时）"><a href="#26-方向数组（面对具有方向的二维问题时）" class="headerlink" title="26.方向数组（面对具有方向的二维问题时）"></a>26.方向数组（面对具有方向的二维问题时）</h2><p>这个问题要求我们生成一个 <code>n×n</code> 的蛇形矩阵，矩阵的填充方式是从右上角开始，按照顺时针方向填充数字 1 到 <code>n×n</code>。要实现这一点，我们需要根据矩阵的规律进行填充。</p>
+<h3 id="解题思路-1"><a href="#解题思路-1" class="headerlink" title="解题思路"></a>解题思路</h3><ol>
+<li><strong>蛇形矩阵的特点</strong>：<ul>
+<li>从右上角开始填充数字 1，2，3，…，直到 <code>n×n</code>。</li>
+<li>填充规则是顺时针方向，开始时从右上角填充，接着是下方、左方，再上方，依此循环。</li>
+</ul>
+</li>
+<li><strong>如何实现</strong>：<ul>
+<li>我们可以用一个二维数组来表示矩阵，使用变量来跟踪当前的填充位置。</li>
+<li>初始化位置为右上角 <code>(0, n-1)</code>。</li>
+<li>然后按照顺时针方向移动。我们可以定义一个方向数组来表示顺时针方向的移动顺序（上、右、下、左）。</li>
+</ul>
+</li>
+<li><strong>边界处理</strong>：<ul>
+<li>在填充过程中，要确保每次移动都在矩阵内部，如果遇到已经填充的格子，应该改变方向。</li>
+</ul>
+</li>
+</ol>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAXN (25)</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">/**********Begin**********/</span></span><br><span class="line">    <span class="type">int</span> n, i, j, x = <span class="number">0</span>, y, dir = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> mat[MAXN][MAXN] = &#123; <span class="number">0</span> &#125;;</span><br><span class="line">    <span class="comment">//预处理方向为向下、向左、向上、向右时，横纵坐标的偏移量dx，dy</span></span><br><span class="line">    <span class="type">int</span> dx[<span class="number">4</span>] = &#123; <span class="number">1</span>, <span class="number">0</span>, <span class="number">-1</span>, <span class="number">0</span> &#125;;</span><br><span class="line">    <span class="type">int</span> dy[<span class="number">4</span>] = &#123; <span class="number">0</span>, <span class="number">-1</span>, <span class="number">0</span>, <span class="number">1</span> &#125;;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    y = n - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= n * n; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        mat[x][y] = i;</span><br><span class="line">        <span class="comment">//在dir 方向上走一步</span></span><br><span class="line">        <span class="type">int</span> nx = x + dx[dir];</span><br><span class="line">        <span class="type">int</span> ny = y + dy[dir];</span><br><span class="line">        <span class="comment">//如果当前坐标(dx,dy) 超过了边界，或者是已经填了数字</span></span><br><span class="line">        <span class="keyword">if</span> (!(<span class="number">0</span> &lt;= nx &amp;&amp; nx &lt; n &amp;&amp; <span class="number">0</span> &lt;= ny &amp;&amp; ny &lt; n) || mat[nx][ny])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//顺时针旋转一个方向，然后再走一步</span></span><br><span class="line">            dir = (dir + <span class="number">1</span>) % <span class="number">4</span>;</span><br><span class="line">            nx = x + dx[dir];</span><br><span class="line">            ny = y + dy[dir];</span><br><span class="line">        &#125;</span><br><span class="line">        x = nx;</span><br><span class="line">        y = ny;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">        <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; n; ++j)</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, mat[i][j]);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**********End**********/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="代码解析"><a href="#代码解析" class="headerlink" title="代码解析"></a>代码解析</h3><ol>
+<li><strong>初始化</strong>：<ul>
+<li><code>matrix</code> 数组用来存储最终的蛇形矩阵，所有元素初始化为 0。</li>
+<li><code>directions</code> 数组表示顺时针方向的移动顺序，分别对应上、右、下、左。</li>
+<li><code>x</code> 和 <code>y</code> 分别表示当前填充位置的行和列，初始位置为右上角 <code>(0, n-1)</code>。</li>
+<li><code>num</code> 从 1 开始，表示当前要填充的数字。</li>
+<li><code>dir</code> 表示当前的方向，初始为 0（向上）。</li>
+</ul>
+</li>
+<li><strong>填充过程</strong>：<ul>
+<li>使用 <code>while</code> 循环填充矩阵，直到填充到 <code>n*n</code>。</li>
+<li>每次填充一个数字后，计算下一个位置 <code>(nx, ny)</code>。</li>
+<li>如果下一个位置越界或已经被填充，就改变方向（顺时针改变方向）。</li>
+<li>更新当前位置为 <code>nx</code> 和 <code>ny</code>。</li>
+</ul>
+</li>
+<li><strong>输出</strong>：<ul>
+<li>完成填充后，输出矩阵中的所有元素，每行输出 <code>n</code> 个数字。</li>
+</ul>
+</li>
+</ol>
+<h2 id="27-dfs（3-2-28）"><a href="#27-dfs（3-2-28）" class="headerlink" title="27.dfs（3.2.28）"></a>27.dfs（3.2.28）</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">dfs</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> &#123;</span><br><span class="line">    <span class="comment">// 标记当前陆地为已访问（0代表海洋，1代表陆地）</span></span><br><span class="line">    grid[x][y] = <span class="string">&#x27;0&#x27;</span>; </span><br><span class="line"></span><br><span class="line">    <span class="comment">// 遍历四个方向</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++) &#123;</span><br><span class="line">        <span class="type">int</span> nx = x + directions[i][<span class="number">0</span>];</span><br><span class="line">        <span class="type">int</span> ny = y + directions[i][<span class="number">1</span>];</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 检查是否越界且是否是陆地</span></span><br><span class="line">        <span class="keyword">if</span> (nx &gt;= <span class="number">0</span> &amp;&amp; nx &lt; row_n &amp;&amp; ny &gt;= <span class="number">0</span> &amp;&amp; ny &lt; col_n &amp;&amp; grid[nx][ny] == <span class="string">&#x27;1&#x27;</span>) &#123;</span><br><span class="line">            dfs(nx, ny); <span class="comment">// 递归访问相连的陆地</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="28-计算一个已知各顶点的多边形面积："><a href="#28-计算一个已知各顶点的多边形面积：" class="headerlink" title="28.计算一个已知各顶点的多边形面积："></a>28.计算一个已知各顶点的多边形面积：</h2><p>要计算一个凸多边形的面积，可以使用**”叉积法”**，即多边形的面积公式。具体来说，如果你有一个凸多边形的顶点序列 (x1, y1), (x2, y2), …, (xn, yn)，则面积计算公式如下：<br>$$<br>\text{面积} &#x3D; \frac{1}{2} \times \left| \sum_{i&#x3D;1}^{n} (x_i \cdot y_{i+1} - x_{i+1} \cdot y_i) \right|<br>$$<br>其中，<br>$$<br>(xn+1, yn+1)<br>$$</p>
+<p> 是 (x1, y1)，即环绕一圈计算。</p>
+<h2 id="29-结构体排序"><a href="#29-结构体排序" class="headerlink" title="29.结构体排序"></a>29.结构体排序</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">compareStudents</span><span class="params">(<span class="type">const</span> <span class="type">void</span> *a, <span class="type">const</span> <span class="type">void</span> *b)</span> &#123;</span><br><span class="line">    Student *sa = (Student *)a; <span class="comment">// 将 void 指针类型强制转换为 Student 指针类型</span></span><br><span class="line">    Student *sb = (Student *)b;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 按月份升序排序</span></span><br><span class="line">    <span class="keyword">if</span> (sa-&gt;month != sb-&gt;month) </span><br><span class="line">        <span class="keyword">return</span> sa-&gt;month - sb-&gt;month;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 如果月份相同，按日期升序排序</span></span><br><span class="line">    <span class="keyword">if</span> (sa-&gt;day != sb-&gt;day) </span><br><span class="line">        <span class="keyword">return</span> sa-&gt;day - sb-&gt;day;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 如果日期也相同，按姓名字典序升序排序</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">strcmp</span>(sa-&gt;name, sb-&gt;name);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//多条件的</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>单条件的：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">compareByMonth</span><span class="params">(<span class="type">const</span> <span class="type">void</span> *a, <span class="type">const</span> <span class="type">void</span> *b)</span> &#123;</span><br><span class="line">    Student *sa = (Student *)a;</span><br><span class="line">    Student *sb = (Student *)b;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> sa-&gt;month - sb-&gt;month; <span class="comment">// 按月份升序排序</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>等于-1就是排序的方向</p>
+<p><strong>用于字符串的比较：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 比较函数，用于qsort排序</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">compare</span><span class="params">(<span class="type">const</span> <span class="type">void</span> *a, <span class="type">const</span> <span class="type">void</span> *b)</span> &#123;</span><br><span class="line">    <span class="type">char</span> *strA = *(<span class="type">char</span> **)a;</span><br><span class="line">    <span class="type">char</span> *strB = *(<span class="type">char</span> **)b;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> lenA = <span class="built_in">strlen</span>(strA);</span><br><span class="line">    <span class="type">int</span> lenB = <span class="built_in">strlen</span>(strB);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 按长度从长到短排序</span></span><br><span class="line">    <span class="keyword">if</span> (lenA != lenB) &#123;</span><br><span class="line">        <span class="keyword">return</span> lenB - lenA;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 如果长度相同，按首字母字典序排序（区分大小写）</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">strcmp</span>(strA, strB);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="30-链表："><a href="#30-链表：" class="headerlink" title="30.链表："></a>30.链表：</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义链表节点结构体</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span> &#123;</span></span><br><span class="line">    <span class="type">int</span> num;                <span class="comment">// 记录人的编号</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span>* <span class="title">next</span>;</span>      <span class="comment">// 指向下一个节点</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> n, count = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建循环链表</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">head</span> =</span> <span class="literal">NULL</span>, *prev = <span class="literal">NULL</span>, *temp = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        temp = (<span class="keyword">struct</span> Node*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> Node));</span><br><span class="line">        temp-&gt;num = i;</span><br><span class="line">        temp-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (head == <span class="literal">NULL</span>) &#123;</span><br><span class="line">            head = temp;    <span class="comment">// 第一个节点</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            prev-&gt;next = temp;  <span class="comment">// 链接到前一个节点</span></span><br><span class="line">        &#125;</span><br><span class="line">        prev = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    prev-&gt;next = head;  <span class="comment">// 链表首尾相连，形成循环链表</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 模拟约瑟夫环</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span>* <span class="title">current</span> =</span> head;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span>* <span class="title">previous</span> =</span> prev;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (current-&gt;next != current) &#123; <span class="comment">// 直到只剩下一个节点</span></span><br><span class="line">        count++;</span><br><span class="line">        <span class="keyword">if</span> (count == <span class="number">3</span>) &#123;  <span class="comment">// 报数到 3 时</span></span><br><span class="line">            <span class="comment">// 删除当前节点</span></span><br><span class="line">            previous-&gt;next = current-&gt;next;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;Person %d is out\n&quot;</span>, current-&gt;num);</span><br><span class="line">            <span class="built_in">free</span>(current);</span><br><span class="line">            current = previous-&gt;next; <span class="comment">// 移动到下一个节点</span></span><br><span class="line">            count = <span class="number">0</span>; <span class="comment">// 重置计数</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            previous = current;</span><br><span class="line">            current = current-&gt;next; <span class="comment">// 移动到下一个节点</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 输出最后剩下的人</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;The winner is: %d\n&quot;</span>, current-&gt;num);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>排序算法</strong>：</p>
+<ul>
+<li><p>在 C 的 </p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qsort</span><br></pre></td></tr></table></figure>
+
+<p> 函数中，比较函数的返回值控制排序规则：</p>
+<ul>
+<li><strong>返回负值：第一个元素排在前面。</strong></li>
+<li><strong>返回正值：第二个元素排在前面。</strong></li>
+<li>返回 0：两个元素位置不变。</li>
+</ul>
+</li>
+</ul>
+<h2 id="31-哈希表："><a href="#31-哈希表：" class="headerlink" title="31.哈希表："></a>31.哈希表：</h2><p>哈希表（Hash Table）是一种数据结构，用于以 <strong>键值对（key-value pair）</strong> 的形式存储数据，能够快速查找、插入或删除数据。</p>
+<p>在这个问题中，我们用到的是一个简单的哈希表（通过数组模拟），用来存储字符和它们的“权重”或“优先级”（称为哈希索引）。我们通过这些权重，定义一个新的字符比较规则，用来对单词进行排序。</p>
+<hr>
+<h3 id="哈希表的核心概念"><a href="#哈希表的核心概念" class="headerlink" title="哈希表的核心概念"></a><strong>哈希表的核心概念</strong></h3><ol>
+<li><strong>键（Key）</strong>：唯一标识某个数据。例如，这里我们用字母 <code>&#39;a&#39;</code> 到 <code>&#39;z&#39;</code> 和 <code>&#39;A&#39;</code> 到 <code>&#39;Z&#39;</code> 作为键。</li>
+<li><strong>值（Value）</strong>：与键相关联的数据。例如，这里用输入的整数表示每个字母的哈希索引值。</li>
+</ol>
+<p><strong>哈希表的功能</strong>：快速根据键找到对应的值。 在这道题中，哈希表就是一个简单的数组：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">c</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">复制编辑</span><br><span class="line">int hash[256];</span><br></pre></td></tr></table></figure>
+
+<p>这里我们用 <code>hash</code> 数组记录每个字符的哈希值（优先级），<code>hash[i]</code> 存储字符 <code>i</code> 对应的优先级。</p>
+<hr>
+<h3 id="这段代码中哈希表的具体用途"><a href="#这段代码中哈希表的具体用途" class="headerlink" title="这段代码中哈希表的具体用途"></a><strong>这段代码中哈希表的具体用途</strong></h3><ol>
+<li><p><strong>输入哈希索引表</strong>：</p>
+<ul>
+<li><p>输入包含 52 个整数，分别代表 <code>&#39;a&#39;</code>-<code>&#39;z&#39;</code> 和 <code>&#39;A&#39;</code>-<code>&#39;Z&#39;</code> 的优先级。</p>
+</li>
+<li><p>通过下面的代码将这些优先级存入 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hash</span><br></pre></td></tr></table></figure>
+
+<p> 数组：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">c复制编辑for (int i = &#x27;a&#x27;; i &lt;= &#x27;z&#x27;; i++) &#123;</span><br><span class="line">    scanf(&quot;%d&quot;, &amp;hash[i]);</span><br><span class="line">&#125;</span><br><span class="line">for (int i = &#x27;A&#x27;; i &lt;= &#x27;Z&#x27;; i++) &#123;</span><br><span class="line">    scanf(&quot;%d&quot;, &amp;hash[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bash复制编辑输入：-1 2 3 ... 52</span><br><span class="line">意味着：hash[&#x27;a&#x27;] = -1, hash[&#x27;b&#x27;] = 2, ..., hash[&#x27;Z&#x27;] = 52</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>比较两个字符的优先级</strong>：</p>
+<ul>
+<li><p>我们可以通过 <code>hash[字符]</code> 找到这个字符对应的优先级。</p>
+</li>
+<li><p>比较两个字符 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x</span><br></pre></td></tr></table></figure>
+
+<p> 和 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">y</span><br></pre></td></tr></table></figure>
+
+<p> 时：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">c复制编辑if (hash[x] != hash[y]) &#123;</span><br><span class="line">    return hash[x] - hash[y];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>单词排序</strong>：</p>
+<ul>
+<li><p>每次比较两个单词时，按字典规则逐字符比较，但字典顺序被 <code>hash</code> 优先级表替代。</p>
+</li>
+<li><p>例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">c复制编辑假设输入：</span><br><span class="line">hash[&#x27;a&#x27;] = -1, hash[&#x27;b&#x27;] = 2, hash[&#x27;A&#x27;] = 27</span><br><span class="line">单词列表：aaa, aAb, bbb</span><br></pre></td></tr></table></figure>
+
+<p>排序结果：</p>
+<ul>
+<li><code>&#39;aaa&#39;</code> -&gt; <code>-1, -1, -1</code></li>
+<li><code>&#39;aAb&#39;</code> -&gt; <code>-1, 27, 2</code></li>
+<li><code>&#39;bbb&#39;</code> -&gt; <code>2, 2, 2</code> 按优先级依次为：<code>aaa</code> &lt; <code>aAb</code> &lt; <code>bbb</code>。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">char</span> word[<span class="number">505</span>][<span class="number">1050</span>]; <span class="comment">// 存储单词的数组</span></span><br><span class="line"><span class="type">int</span> hash[<span class="number">256</span>];        <span class="comment">// 哈希索引表</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 自定义比较函数，根据哈希值排序</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">cmps</span><span class="params">(<span class="type">const</span> <span class="type">void</span> *a, <span class="type">const</span> <span class="type">void</span> *b)</span> &#123;</span><br><span class="line">    <span class="type">char</span> *wordA = (<span class="type">char</span> *)a;</span><br><span class="line">    <span class="type">char</span> *wordB = (<span class="type">char</span> *)b;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 按照字符逐个比较哈希值</span></span><br><span class="line">    <span class="keyword">while</span> (wordA[i] &amp;&amp; wordB[i]) &#123;</span><br><span class="line">        <span class="keyword">if</span> (hash[(<span class="type">unsigned</span> <span class="type">char</span>)wordA[i]] != hash[(<span class="type">unsigned</span> <span class="type">char</span>)wordB[i]]) &#123;</span><br><span class="line">            <span class="keyword">return</span> hash[(<span class="type">unsigned</span> <span class="type">char</span>)wordA[i]] - hash[(<span class="type">unsigned</span> <span class="type">char</span>)wordB[i]];</span><br><span class="line">        &#125;</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 若所有字符的哈希值都相同，较短的单词排在前面</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">strlen</span>(wordA) - <span class="built_in">strlen</span>(wordB);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 输入哈希索引表</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="string">&#x27;a&#x27;</span>; i &lt;= <span class="string">&#x27;z&#x27;</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;hash[i]); <span class="comment">// 对应 &#x27;a&#x27;-&#x27;z&#x27; 的哈希值</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="string">&#x27;A&#x27;</span>; i &lt;= <span class="string">&#x27;Z&#x27;</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;hash[i]); <span class="comment">// 对应 &#x27;A&#x27;-&#x27;Z&#x27; 的哈希值</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 输入单词总数</span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 输入所有单词</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, word[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 使用 qsort 按照自定义比较函数排序</span></span><br><span class="line">    qsort(word, n, <span class="keyword">sizeof</span>(word[<span class="number">0</span>]), cmps);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 输出排序后的单词</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%s\n&quot;</span>, word[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="32-田忌赛马策略（贪心）：如果我方最强大于敌方最强，则-，否则用我方最弱消耗对方最强"><a href="#32-田忌赛马策略（贪心）：如果我方最强大于敌方最强，则-，否则用我方最弱消耗对方最强" class="headerlink" title="32.田忌赛马策略（贪心）：如果我方最强大于敌方最强，则+，否则用我方最弱消耗对方最强"></a>32.田忌赛马策略（贪心）：如果我方最强大于敌方最强，则+，否则用我方最弱消耗对方最强</h2></article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/%E5%B8%9D%E5%90%9B%E5%96%9D%E8%8C%B6.gif" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/%E5%B8%9D%E5%90%9B%E5%96%9D%E8%8C%B6.gif" title="头像" alt="头像"></a><div class="post-copyright__author_name">fufhaha</div><div class="post-copyright__author_desc">存储知识</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://huhuha.top/2025/02/09/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E5%8C%97%E8%88%AA%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E4%BA%94/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://huhuha.top/2025/02/09/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E5%8C%97%E8%88%AA%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E4%BA%94/')">北航刷题笔记 其五</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://huhuha.top/2025/02/09/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E5%8C%97%E8%88%AA%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E4%BA%94/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=北航刷题笔记 其五&amp;url=https://huhuha.top/2025/02/09/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E5%8C%97%E8%88%AA%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E4%BA%94/&amp;pic=/images/202504071512548.jpg" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://huhuha.top" target="_blank">仓库</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E7%AC%94%E8%AE%B0/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>笔记<span class="tagsPageCount">13</span></a><a class="post-meta__box__tags" href="/tags/c-c/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>c/c++<span class="tagsPageCount">11</span></a><a class="post-meta__box__tags" href="/tags/%E5%8C%97%E8%88%AA/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>北航<span class="tagsPageCount">6</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="/images/202504071512122.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2025/02/09/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E5%8C%97%E8%88%AA%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E5%9B%9B/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/202504071512548.jpg" onerror="onerror=null;src='/images/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">北航刷题笔记 其四</div></div></a></div><div class="next-post pull-right"><a href="/2025/02/09/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E5%8C%97%E8%88%AA%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E5%85%AD/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/202504071512548.jpg" onerror="onerror=null;src='/images/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">北航刷题笔记 其六</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/2025/02/02/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E5%8C%97%E8%88%AA%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E4%B8%80/" title="北航刷题笔记 其一"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/202504071512548.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-02-02</div><div class="title">北航刷题笔记 其一</div></div></a></div><div><a href="/2025/02/09/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E5%8C%97%E8%88%AA%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E4%B8%89/" title="北航刷题笔记 其三"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/202504071512548.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-02-09</div><div class="title">北航刷题笔记 其三</div></div></a></div><div><a href="/2025/02/09/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E5%8C%97%E8%88%AA%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E4%BA%8C/" title="北航刷题笔记 其二"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/202504071512548.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-02-09</div><div class="title">北航刷题笔记 其二</div></div></a></div><div><a href="/2025/02/09/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E5%8C%97%E8%88%AA%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E5%85%AD/" title="北航刷题笔记 其六"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/202504071512548.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-02-09</div><div class="title">北航刷题笔记 其六</div></div></a></div><div><a href="/2025/02/09/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E5%8C%97%E8%88%AA%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E5%9B%9B/" title="北航刷题笔记 其四"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/202504071512548.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-02-09</div><div class="title">北航刷题笔记 其四</div></div></a></div><div><a href="/2025/02/09/C%E6%88%96C++%E7%AE%97%E6%B3%95/%E6%B4%9B%E8%B0%B7%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%20%E5%85%B6%E4%B8%80/" title="洛谷刷题笔记 其一"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/202504071512548.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-02-09</div><div class="title">洛谷刷题笔记 其一</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/%E5%B8%9D%E5%90%9B%E5%96%9D%E8%8C%B6.gif" onerror="this.onerror=null;this.src='/images/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/%E5%B8%9D%E5%90%9B%E5%96%9D%E8%8C%B6.gif" alt="status"/></div></div><div class="author-info__description">在这里随便逛逛</div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content">欢迎！</div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://bu.dusays.com/2023/05/13/645fa415e8694.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E5%87%BD%E6%95%B0%E5%8F%8A%E5%BA%94%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">3.函数及应用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%87%AA%E7%84%B6%E5%B8%B8%E6%95%B0e%EF%BC%88math-h%EF%BC%89"><span class="toc-number">1.1.</span> <span class="toc-text">1.自然常数e（math.h）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%B8%89%E6%AC%A1%E6%96%B9%E6%A0%B9%EF%BC%88math-h%EF%BC%89"><span class="toc-number">1.2.</span> <span class="toc-text">2.三次方根（math.h）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%85%A8%E9%94%99%E4%BD%8D%E6%8E%92%E5%BA%8F%E5%85%AC%E5%BC%8F%EF%BC%9A"><span class="toc-number">1.3.</span> <span class="toc-text">3.全错位排序公式：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A8%E9%94%99%E4%BD%8D%E6%8E%92%E5%BA%8F%E7%9A%84%E9%80%92%E6%8E%A8%E5%85%AC%E5%BC%8F"><span class="toc-number">1.3.1.</span> <span class="toc-text">全错位排序的递推公式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-while%E4%B8%AD%E7%94%A8%E4%BA%8E%E6%B2%A1%E7%BB%99%E5%87%BA%E5%85%B7%E4%BD%93%E5%BE%AA%E7%8E%AF%E4%B8%AA%E6%95%B0%E4%BD%86%E8%A6%81%E8%AF%BB%E5%8F%96%E6%95%B0%E7%9A%84%E6%83%85%E5%86%B5%EF%BC%9A"><span class="toc-number">1.4.</span> <span class="toc-text">4.while中用于没给出具体循环个数但要读取数的情况：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#scanf-%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-number">1.4.1.</span> <span class="toc-text">scanf 的返回值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.4.2.</span> <span class="toc-text">~ 运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E5%90%88%E8%B5%B7%E6%9D%A5%E7%9A%84%E6%95%88%E6%9E%9C"><span class="toc-number">1.4.3.</span> <span class="toc-text">结合起来的效果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%9A"><span class="toc-number">1.5.</span> <span class="toc-text">5.动态规划：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3%EF%BC%9A"><span class="toc-number">1.5.1.</span> <span class="toc-text">动态规划的基本思想：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%9A%84%E8%A7%A3%E9%A2%98%E6%AD%A5%E9%AA%A4%EF%BC%9A"><span class="toc-number">1.5.2.</span> <span class="toc-text">动态规划的解题步骤：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%9A%84%E5%B8%B8%E8%A7%81%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%EF%BC%9A"><span class="toc-number">1.5.3.</span> <span class="toc-text">动态规划的常见应用场景：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BE%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%BE%8B%E5%AD%90%EF%BC%9A%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97"><span class="toc-number">1.5.4.</span> <span class="toc-text">举个简单的例子：斐波那契数列</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%92%E6%8E%A8%E6%B3%95%EF%BC%9A"><span class="toc-number">1.5.4.1.</span> <span class="toc-text">递推法：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E7%9A%84%E6%BB%9A%E5%8A%A8%E6%95%B0%E7%BB%84%E6%B3%95%EF%BC%88%E5%87%8F%E5%B0%91%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%EF%BC%89%EF%BC%9A"><span class="toc-number">1.5.4.2.</span> <span class="toc-text">优化的滚动数组法（减少空间复杂度）：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B4%E6%95%B0%E5%88%92%E5%88%86%E9%97%AE%E9%A2%98%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">1.5.5.</span> <span class="toc-text">整数划分问题到底是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E6%9D%A5%E8%A7%A3%E5%86%B3"><span class="toc-number">1.5.6.</span> <span class="toc-text">用动态规划来解决</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3"><span class="toc-number">1.5.6.1.</span> <span class="toc-text">核心思想</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BE%E4%BE%8B%EF%BC%9A%E5%88%92%E5%88%86-5"><span class="toc-number">1.5.7.</span> <span class="toc-text">举例：划分 5</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%AE%9A%E4%B9%89"><span class="toc-number">1.5.7.1.</span> <span class="toc-text">1. 定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%A6%82%E4%BD%95%E5%88%92%E5%88%86%EF%BC%9F"><span class="toc-number">1.5.7.2.</span> <span class="toc-text">2. 如何划分？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB%E5%85%AC%E5%BC%8F"><span class="toc-number">1.5.7.3.</span> <span class="toc-text">3. 状态转移公式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E6%83%85%E5%86%B5"><span class="toc-number">1.5.7.4.</span> <span class="toc-text">特殊情况</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">1.5.8.</span> <span class="toc-text">初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BE%E4%BE%8B%E5%A1%AB%E8%A1%A8"><span class="toc-number">1.5.9.</span> <span class="toc-text">举例填表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC%E7%9A%84%E5%90%AB%E4%B9%89"><span class="toc-number">1.5.10.</span> <span class="toc-text">表格的含义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#eg2"><span class="toc-number">1.5.11.</span> <span class="toc-text">eg2.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF"><span class="toc-number">1.5.12.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-number">1.5.13.</span> <span class="toc-text">示例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%EF%BC%9A"><span class="toc-number">1.5.13.1.</span> <span class="toc-text">输入：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E9%87%8A%EF%BC%9A"><span class="toc-number">1.5.13.2.</span> <span class="toc-text">解释：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%EF%BC%9A"><span class="toc-number">1.5.13.3.</span> <span class="toc-text">输出：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#C%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.5.14.</span> <span class="toc-text">C代码实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E8%AE%B2%E8%A7%A3"><span class="toc-number">1.5.15.</span> <span class="toc-text">代码讲解</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E6%B1%82%E7%A7%AF%E5%88%86%E7%9A%84%E9%9D%A2%E7%A7%AF%EF%BC%9A"><span class="toc-number">1.6.</span> <span class="toc-text">6.求积分的面积：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%9B%E6%99%AE%E6%A3%AE%E6%B3%95%E5%88%99%EF%BC%88Simpson%E2%80%99s-Rule%EF%BC%89"><span class="toc-number">1.6.1.</span> <span class="toc-text">辛普森法则（Simpson’s Rule）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E8%AE%A1%E6%95%B0%E6%95%B0%E7%BB%84%EF%BC%88%E5%93%88%E5%B8%8C%E8%A1%A8%EF%BC%89%EF%BC%9A%E7%94%A8%E4%BA%8E%E4%B8%93%E9%97%A8%E8%AE%A1%E6%95%B0%E7%BB%84%E4%B8%AD%E5%85%83%E7%B4%A0%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0%EF%BC%9A"><span class="toc-number">1.7.</span> <span class="toc-text">7.计数数组（哈希表）：用于专门计数组中元素出现的次数：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E5%B0%8610%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%B8%BAn%E8%BF%9B%E5%88%B6%EF%BC%9A%E7%94%A8%E6%95%B0%E7%BB%84%EF%BC%88%E5%B0%B1%E6%98%AF%E4%B8%8D%E6%96%AD%E5%9C%B0%E5%8F%96%E4%BD%99%EF%BC%8C%E6%AF%8F%E6%AC%A1%E5%95%86%E6%9B%B4%E6%96%B0%EF%BC%8C%E6%9C%80%E5%90%8E%E7%BB%93%E6%9E%9C%E5%80%92%E5%BA%8F%E8%BE%93%E5%87%BA%EF%BC%89"><span class="toc-number">1.8.</span> <span class="toc-text">8.将10进制转换为n进制：用数组（就是不断地取余，每次商更新，最后结果倒序输出）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E5%A6%82%E6%9E%9C%E8%A6%81%E5%B0%86%E6%95%B0%E5%AD%97%E6%88%96%E8%80%85%E5%AD%97%E6%AF%8D%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%AD%97%E7%AC%A6"><span class="toc-number">1.9.</span> <span class="toc-text">9.如果要将数字或者字母转换为字符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-%E9%81%87%E5%88%B0%E6%95%B4%E4%BD%93%E9%94%99%E4%BD%8D%E9%97%AE%E9%A2%98%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%BE%80%E7%9F%A9%E9%98%B5%E6%96%B9%E5%90%91%E6%83%B3%EF%BC%88%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E8%B5%8B%E5%80%BC%E4%B8%8E%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%80%E8%B5%B7%EF%BC%89"><span class="toc-number">1.10.</span> <span class="toc-text">10.遇到整体错位问题，可以往矩阵方向想（二维数组赋值与初始化一起）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E5%8F%8C%E6%8C%87%E9%92%883-2-9"><span class="toc-number">1.11.</span> <span class="toc-text">11.双指针3.2.9</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12"><span class="toc-number">1.12.</span> <span class="toc-text">12.&lt;string.h&gt;:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-%E9%80%9A%E8%BF%87-islower-%E5%92%8C-isupper-%E6%9D%A5%E5%88%86%E5%88%AB%E5%88%A4%E6%96%AD%E5%AD%97%E7%AC%A6%E6%98%AF%E5%B0%8F%E5%86%99%E5%AD%97%E6%AF%8D%E8%BF%98%E6%98%AF%E5%A4%A7%E5%86%99%E5%AD%97%E6%AF%8D%EF%BC%88ctype-h%EF%BC%89"><span class="toc-number">1.13.</span> <span class="toc-text">13.通过 islower 和 isupper 来分别判断字符是小写字母还是大写字母（ctype.h）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-%E7%BB%9D%E5%AF%B9%E5%80%BC%E6%9B%B4%E6%96%B0%EF%BC%9A"><span class="toc-number">1.14.</span> <span class="toc-text">14.绝对值更新：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-%E6%AF%94%E8%BE%83%E4%B8%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%98%AF%E5%90%A6%E7%9B%B8%E7%AD%89%EF%BC%9A"><span class="toc-number">1.15.</span> <span class="toc-text">15.比较两字符串是否相等：&lt;string.h&gt;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-%E8%B4%A8%E6%95%B0%EF%BC%8C%E4%B9%9F%E5%8F%AB%E7%B4%A0%E6%95%B0%EF%BC%9A%E6%98%AF%E5%A4%A7%E4%BA%8E1%E7%9A%84%E8%87%AA%E7%84%B6%E6%95%B0%EF%BC%8C%E5%8F%AA%E8%83%BD%E8%A2%AB1%E5%92%8C%E5%AE%83%E6%9C%AC%E8%BA%AB%E6%95%B4%E9%99%A4%E7%9A%84%E6%95%B0"><span class="toc-number">1.16.</span> <span class="toc-text">16.质数，也叫素数：是大于1的自然数，只能被1和它本身整除的数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-%E5%AF%B9%E4%BA%8E%E5%9B%9E%E5%BD%A2%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E6%96%B9%E4%BD%8D%E9%97%AE%E9%A2%983-1-14"><span class="toc-number">1.17.</span> <span class="toc-text">17.对于回形二维数组方位问题3.1.14</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-%E6%8C%87%E9%92%88%E6%89%80%E4%BB%A3%E8%A1%A8%E7%9A%84%E5%9C%B0%E5%9D%80%E7%9A%84%E5%80%BC%E6%98%AF%E5%8F%AA%E6%9C%89%E4%B8%80%E4%B8%AA%E7%9A%84%EF%BC%8C%E6%89%80%E4%BB%A5%E6%9B%B4%E6%94%B9%E5%B0%B1%E7%AE%97%E5%86%8D%E5%87%BD%E6%95%B0%E4%B8%AD%E4%B9%9F%E4%BC%9A%E6%9B%B4%E6%94%B9%E5%88%B0%E6%9C%AC%E4%BD%93"><span class="toc-number">1.18.</span> <span class="toc-text">18.指针所代表的地址的值是只有一个的，所以更改就算再函数中也会更改到本体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-%E5%8A%A8%E6%80%81%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D"><span class="toc-number">1.19.</span> <span class="toc-text">19.动态内存分配</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20%E5%A4%B4%E6%96%87%E4%BB%B6%E4%B8%AD-%E6%9F%A5%E6%89%BE%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9F%90%E9%83%A8%E5%88%86-%E5%92%8C-%E6%9B%BF%E6%8D%A2%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9F%90%E9%83%A8%E5%88%86"><span class="toc-number">1.20.</span> <span class="toc-text">20&lt;string.h&gt;头文件中 查找数组中的某部分 和 替换数组中的某部分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#strstr"><span class="toc-number">1.20.1.</span> <span class="toc-text">strstr()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#strncpy"><span class="toc-number">1.20.2.</span> <span class="toc-text">strncpy()</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#21-char-month-%E2%80%9CJanuary%E2%80%9D-%E2%80%9CFebruary%E2%80%9D-%E2%80%9CMarch%E2%80%9D-%E2%80%9CApril%E2%80%9D-%E2%80%9CMay%E2%80%9D-%E2%80%9CJune%E2%80%9D-%E2%80%9CJuly%E2%80%9D-%E2%80%9CAugust%E2%80%9D-%E2%80%9CSeptember%E2%80%9D-%E2%80%9COctober%E2%80%9D-%E2%80%9CNovember%E2%80%9D-%E2%80%9CDecember%E2%80%9D"><span class="toc-number">1.21.</span> <span class="toc-text">21.char *month[] &#x3D; { “January”, “February”, “March”, “April”, “May”, “June”, “July”, “August”, “September”, “October”, “November”, “December” };</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8E%E5%AD%97%E7%AC%A6%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="toc-number">1.21.1.</span> <span class="toc-text">字符串与字符的区别：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-strtok-buffer-%E2%80%9C-n%E2%80%9D-%E5%88%86%E5%89%B2%E8%BE%93%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%BA%E5%8D%95%E8%AF%8D%EF%BC%8Cstrcpy-strArray-n-word-%E5%A4%8D%E5%88%B6%E5%8D%95%E8%AF%8D%E5%88%B0-strArray"><span class="toc-number">1.22.</span> <span class="toc-text">22.strtok(buffer, “ \n”); &#x2F;&#x2F; 分割输入字符串为单词，strcpy(strArray[n], word);  &#x2F;&#x2F; 复制单词到 strArray</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-%E5%8F%96%E4%BD%99-%E4%BC%9A%E4%B8%80%E7%9B%B4%E9%99%A4%EF%BC%8C%E9%99%A4%E5%88%B0%E5%BA%95"><span class="toc-number">1.23.</span> <span class="toc-text">23.取余%会一直除，除到底</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#24-%E6%B1%89%E8%AF%BA%E5%A1%94"><span class="toc-number">1.24.</span> <span class="toc-text">24.汉诺塔</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%92%E5%BD%92%E5%85%B3%E7%B3%BB%EF%BC%9A"><span class="toc-number">1.24.1.</span> <span class="toc-text">递归关系：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#25-%E7%BA%A6%E7%91%9F%E5%A4%AB%E9%97%AE%E9%A2%98%EF%BC%9A"><span class="toc-number">1.25.</span> <span class="toc-text">25.约瑟夫问题：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%A6%E7%91%9F%E5%A4%AB%E9%97%AE%E9%A2%98%E9%80%9A%E4%BF%97%E8%A7%A3%E9%87%8A"><span class="toc-number">1.25.1.</span> <span class="toc-text">约瑟夫问题通俗解释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E6%B3%95%E6%80%9D%E8%B7%AF"><span class="toc-number">1.25.2.</span> <span class="toc-text">解法思路</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%AD%A5%E9%AA%A4"><span class="toc-number">1.25.2.1.</span> <span class="toc-text">核心步骤</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%AA%E4%BB%A3%E7%A0%81"><span class="toc-number">1.25.3.</span> <span class="toc-text">伪代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-1"><span class="toc-number">1.25.4.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#C%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-1"><span class="toc-number">1.25.5.</span> <span class="toc-text">C代码实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E7%82%B9%E8%AE%B2%E8%A7%A3"><span class="toc-number">1.25.6.</span> <span class="toc-text">关键点讲解</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#26-%E6%96%B9%E5%90%91%E6%95%B0%E7%BB%84%EF%BC%88%E9%9D%A2%E5%AF%B9%E5%85%B7%E6%9C%89%E6%96%B9%E5%90%91%E7%9A%84%E4%BA%8C%E7%BB%B4%E9%97%AE%E9%A2%98%E6%97%B6%EF%BC%89"><span class="toc-number">1.26.</span> <span class="toc-text">26.方向数组（面对具有方向的二维问题时）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF-1"><span class="toc-number">1.26.1.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.26.2.</span> <span class="toc-text">代码实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90"><span class="toc-number">1.26.3.</span> <span class="toc-text">代码解析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#27-dfs%EF%BC%883-2-28%EF%BC%89"><span class="toc-number">1.27.</span> <span class="toc-text">27.dfs（3.2.28）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#28-%E8%AE%A1%E7%AE%97%E4%B8%80%E4%B8%AA%E5%B7%B2%E7%9F%A5%E5%90%84%E9%A1%B6%E7%82%B9%E7%9A%84%E5%A4%9A%E8%BE%B9%E5%BD%A2%E9%9D%A2%E7%A7%AF%EF%BC%9A"><span class="toc-number">1.28.</span> <span class="toc-text">28.计算一个已知各顶点的多边形面积：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#29-%E7%BB%93%E6%9E%84%E4%BD%93%E6%8E%92%E5%BA%8F"><span class="toc-number">1.29.</span> <span class="toc-text">29.结构体排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#30-%E9%93%BE%E8%A1%A8%EF%BC%9A"><span class="toc-number">1.30.</span> <span class="toc-text">30.链表：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#31-%E5%93%88%E5%B8%8C%E8%A1%A8%EF%BC%9A"><span class="toc-number">1.31.</span> <span class="toc-text">31.哈希表：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%93%88%E5%B8%8C%E8%A1%A8%E7%9A%84%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5"><span class="toc-number">1.31.1.</span> <span class="toc-text">哈希表的核心概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%99%E6%AE%B5%E4%BB%A3%E7%A0%81%E4%B8%AD%E5%93%88%E5%B8%8C%E8%A1%A8%E7%9A%84%E5%85%B7%E4%BD%93%E7%94%A8%E9%80%94"><span class="toc-number">1.31.2.</span> <span class="toc-text">这段代码中哈希表的具体用途</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#32-%E7%94%B0%E5%BF%8C%E8%B5%9B%E9%A9%AC%E7%AD%96%E7%95%A5%EF%BC%88%E8%B4%AA%E5%BF%83%EF%BC%89%EF%BC%9A%E5%A6%82%E6%9E%9C%E6%88%91%E6%96%B9%E6%9C%80%E5%BC%BA%E5%A4%A7%E4%BA%8E%E6%95%8C%E6%96%B9%E6%9C%80%E5%BC%BA%EF%BC%8C%E5%88%99-%EF%BC%8C%E5%90%A6%E5%88%99%E7%94%A8%E6%88%91%E6%96%B9%E6%9C%80%E5%BC%B1%E6%B6%88%E8%80%97%E5%AF%B9%E6%96%B9%E6%9C%80%E5%BC%BA"><span class="toc-number">1.32.</span> <span class="toc-text">32.田忌赛马策略（贪心）：如果我方最强大于敌方最强，则+，否则用我方最弱消耗对方最强</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/04/28/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%20%E5%85%B6%E4%B8%89%20OpenCV%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" title="深度学习 其三 OpenCV图像处理"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/202504071512122.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="深度学习 其三 OpenCV图像处理"/></a><div class="content"><a class="title" href="/2025/04/28/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%20%E5%85%B6%E4%B8%89%20OpenCV%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" title="深度学习 其三 OpenCV图像处理">深度学习 其三 OpenCV图像处理</a><time datetime="2025-04-27T16:00:00.000Z" title="发表于 2025-04-28 00:00:00">2025-04-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/04/27/C++%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%AD%A6%E4%B9%A0/C++%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%20%E5%85%B6%E4%B8%80%20%E8%B5%B0%E8%BF%B7%E5%AE%AB/" title="C++面向对象 其一 走迷宫"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/202504071512695.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="C++面向对象 其一 走迷宫"/></a><div class="content"><a class="title" href="/2025/04/27/C++%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%AD%A6%E4%B9%A0/C++%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%20%E5%85%B6%E4%B8%80%20%E8%B5%B0%E8%BF%B7%E5%AE%AB/" title="C++面向对象 其一 走迷宫">C++面向对象 其一 走迷宫</a><time datetime="2025-04-26T16:00:00.000Z" title="发表于 2025-04-27 00:00:00">2025-04-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/04/27/%E5%A4%87%E8%B5%9B/%E5%A4%87%E8%B5%9B%20%E5%85%B6%E4%B8%80%20%20%20%E6%B9%96%E5%8C%97%E4%BF%A1%E5%88%9B%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" title="备赛 其一 湖北信创人工智能"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/202504071511317.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="备赛 其一 湖北信创人工智能"/></a><div class="content"><a class="title" href="/2025/04/27/%E5%A4%87%E8%B5%9B/%E5%A4%87%E8%B5%9B%20%E5%85%B6%E4%B8%80%20%20%20%E6%B9%96%E5%8C%97%E4%BF%A1%E5%88%9B%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" title="备赛 其一 湖北信创人工智能">备赛 其一 湖北信创人工智能</a><time datetime="2025-04-26T16:00:00.000Z" title="发表于 2025-04-27 00:00:00">2025-04-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/04/27/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%20%E5%85%B6%E4%B8%80%20%E5%88%9D%E8%AF%86/" title="深度学习 其一 图像识别算法"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/202504071512122.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="深度学习 其一 图像识别算法"/></a><div class="content"><a class="title" href="/2025/04/27/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%20%E5%85%B6%E4%B8%80%20%E5%88%9D%E8%AF%86/" title="深度学习 其一 图像识别算法">深度学习 其一 图像识别算法</a><time datetime="2025-04-26T16:00:00.000Z" title="发表于 2025-04-27 00:00:00">2025-04-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/04/27/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%20%20%E5%85%B6%E4%BA%8C%20%20%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%92%8C%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" title="深度学习 其二 神经网络和卷积神经网络"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/202504071512122.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="深度学习 其二 神经网络和卷积神经网络"/></a><div class="content"><a class="title" href="/2025/04/27/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%20%20%E5%85%B6%E4%BA%8C%20%20%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%92%8C%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" title="深度学习 其二 神经网络和卷积神经网络">深度学习 其二 神经网络和卷积神经网络</a><time datetime="2025-04-26T16:00:00.000Z" title="发表于 2025-04-27 00:00:00">2025-04-27</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="workboard"><img class="workSituationImg boardsign" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-上班摸鱼中.svg" alt="距离月入25k也就还差一个大佬带我~" title="距离月入25k也就还差一个大佬带我~"/><div id="runtimeTextTip"></div></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v5.4.0" title="博客框架为Hexo_v5.4.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg" alt="博客框架为Hexo_v5.4.0"/></a><a class="github-badge" target="_blank" href="https://blog.anheyu.com/" style="margin-inline:5px" data-title="本站使用AnZhiYu主题" title="本站使用AnZhiYu主题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg" alt="本站使用AnZhiYu主题"/></a></p></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2024 - 2025 By <a class="footer-bar-link" href="/" title="fufhaha" target="_blank">fufhaha</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">21</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">21</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">0</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/帝君喝茶.gif" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/images/404.jpg&quot;" data-lazy-src="/images/茶水.gif" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/c/" style="font-size: 0.88rem;">c++<sup>1</sup></a><a href="/tags/c-c/" style="font-size: 0.88rem;">c/c++<sup>11</sup></a><a href="/tags/%E5%88%B7%E9%A2%98/" style="font-size: 0.88rem;">刷题<sup>2</sup></a><a href="/tags/%E5%8C%97%E8%88%AA/" style="font-size: 0.88rem;">北航<sup>6</sup></a><a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 0.88rem;">博客<sup>1</sup></a><a href="/tags/%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB%E7%AE%97%E6%B3%95/" style="font-size: 0.88rem;">图像识别算法<sup>4</sup></a><a href="/tags/%E5%A4%87%E8%B5%9B/" style="font-size: 0.88rem;">备赛<sup>1</sup></a><a href="/tags/%E5%A4%A9%E6%A2%AF%E8%B5%9B/" style="font-size: 0.88rem;">天梯赛<sup>1</sup></a><a href="/tags/%E5%AE%9E%E6%88%98/" style="font-size: 0.88rem;">实战<sup>2</sup></a><a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/" style="font-size: 0.88rem;">嵌入式<sup>1</sup></a><a href="/tags/%E6%8C%87%E5%8D%97/" style="font-size: 0.88rem;">指南<sup>1</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 0.88rem;">数据结构<sup>1</sup></a><a href="/tags/%E6%96%B0%E9%A2%86%E5%9F%9F/" style="font-size: 0.88rem;">新领域<sup>1</sup></a><a href="/tags/%E6%B4%9B%E8%B0%B7/" style="font-size: 0.88rem;">洛谷<sup>3</sup></a><a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 0.88rem;">深度学习<sup>4</sup></a><a href="/tags/%E6%B8%B8%E6%88%8F%E5%B0%8F%E9%A1%B9%E7%9B%AE/" style="font-size: 0.88rem;">游戏小项目<sup>1</sup></a><a href="/tags/%E6%B9%96%E5%8D%97%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6/" style="font-size: 0.88rem;">湖南工业大学<sup>1</sup></a><a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 0.88rem;">笔记<sup>13</sup></a><a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 0.88rem;">算法<sup>5</sup></a><a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/" style="font-size: 0.88rem;">蓝桥杯<sup>1</sup></a><a href="/tags/%E9%A1%B9%E7%9B%AE%E8%AE%B2%E8%A7%A3/" style="font-size: 0.88rem;">项目讲解<sup>2</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("2024/10/07 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2024 By 安知鱼 V1.6.14",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 fufhaha 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("2024/10/07 00:00:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    const footer = document.getElementById("footer");
+    if (!footer) return
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      if (img != null) {
+        img.src = "https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-下班啦.svg";
+        img.title = "下班了就该开开心心的玩耍，嘿嘿~";
+        img.alt = "下班了就该开开心心的玩耍，嘿嘿~";
+      }
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="c/c++,笔记,北航"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><script defer="defer" id="ribbon" src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
